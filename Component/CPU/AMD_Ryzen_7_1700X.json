@@ -1,0 +1,36 @@
+{
+  "id": "AMD_Ryzen_7_1700X",
+  "category": "CPU",
+  "manufacturer": "AMD",
+  "model": "Ryzen 7 1700X",
+  "full_name": "AMD Ryzen 7 1700X",
+  "status": "installed",
+  "specifications": {
+    "socket": "AM4",
+    "cores": 8,
+    "threads": 16,
+    "base_ghz": 3.4,
+    "boost_ghz": 3.8,
+    "tdp_w": 95,
+    "architecture": "Zen",
+    "l3_cache_mb": 16
+  },
+  "performance": {
+    "benchmarks": [],
+    "gaming_fps": [],
+    "measurements": []
+  },
+  "pricing": {
+    "new_eur": null,
+    "used_eur": null,
+    "acquisition_eur": null,
+    "shipping_eur": null
+  },
+  "compatibility": {
+    "status": "installed",
+    "notes": "CPU actuel signalé; vérifier version BIOS avant mise à niveau"
+  },
+  "sources": [],
+  "asset": "",
+  "notes": "Caractéristiques constructeur à vérifier et compléter, benchmarks non renseignés."
+}

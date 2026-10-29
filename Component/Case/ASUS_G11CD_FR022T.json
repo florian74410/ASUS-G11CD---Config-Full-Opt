@@ -1,0 +1,36 @@
+{
+  "id": "ASUS_G11CD_FR022T",
+  "category": "Case",
+  "manufacturer": "ASUS",
+  "model": "G11CD-FR022T",
+  "full_name": "ASUS G11CD-FR022T — boîtier noir/rouge",
+  "status": "installed",
+  "specifications": {
+    "height_mm": 440,
+    "depth_mm": 422,
+    "width_mm": 176,
+    "form_factor": "OEM tower",
+    "color": "Noir / rouge",
+    "optical_bay": true,
+    "front_card_reader": true,
+    "gpu_clearance_mm": null,
+    "side_radiator_support": "Projet de modification AIO 240 mm, non validé"
+  },
+  "performance": {
+    "benchmarks": [],
+    "measurements": []
+  },
+  "pricing": {
+    "new_eur": null,
+    "used_eur": null,
+    "acquisition_eur": null,
+    "shipping_eur": null
+  },
+  "compatibility": {
+    "status": "installed",
+    "notes": "Dimensions extérieures approximatives; mesure interne GPU/AIO obligatoire."
+  },
+  "sources": [],
+  "asset": "",
+  "notes": "Panneau latéral ouvrant et projet écran ESP32 tactile."
+}

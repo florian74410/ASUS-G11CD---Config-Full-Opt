@@ -1,0 +1,31 @@
+{
+  "id": "Cooler_Master_RS_600_ACAB_B1",
+  "category": "PSU",
+  "manufacturer": "Cooler Master",
+  "model": "RS-600-ACAB-B1",
+  "full_name": "Cooler Master RS-600-ACAB-B1 600 W",
+  "status": "installed",
+  "specifications": {
+    "nominal_w": 600,
+    "modular": false,
+    "pcie_6plus2_count": 2,
+    "certification": null
+  },
+  "performance": {
+    "benchmarks": [],
+    "measurements": []
+  },
+  "pricing": {
+    "new_eur": null,
+    "used_eur": null,
+    "acquisition_eur": null,
+    "shipping_eur": null
+  },
+  "compatibility": {
+    "status": "installed",
+    "notes": "Deux connecteurs PCIe 6+2 rapportés, vérifier disponibilité réelle sous charge."
+  },
+  "sources": [],
+  "asset": "",
+  "notes": "Modèle et puissance rapportés; vérifier l'étiquette avant installation d'un GPU très gourmand."
+}

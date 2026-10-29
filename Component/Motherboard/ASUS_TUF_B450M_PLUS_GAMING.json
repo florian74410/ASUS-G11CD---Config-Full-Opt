@@ -1,0 +1,32 @@
+{
+  "id": "ASUS_TUF_B450M_PLUS_GAMING",
+  "category": "Motherboard",
+  "manufacturer": "ASUS",
+  "model": "TUF B450M-PLUS GAMING",
+  "full_name": "ASUS TUF B450M-PLUS GAMING",
+  "status": "installed",
+  "specifications": {
+    "form_factor": "Micro-ATX",
+    "socket": "AM4",
+    "chipset": "AMD B450",
+    "bios_version": null,
+    "ram_slots": 4
+  },
+  "performance": {
+    "benchmarks": [],
+    "measurements": []
+  },
+  "pricing": {
+    "new_eur": null,
+    "used_eur": null,
+    "acquisition_eur": null,
+    "shipping_eur": null
+  },
+  "compatibility": {
+    "status": "unverified",
+    "notes": "Modèle précédemment communiqué; vérifier l'inscription physique de la carte mère (autre variante mentionnée)."
+  },
+  "sources": [],
+  "asset": "",
+  "notes": "Inventaire provisoire jusqu'à contrôle visuel."
+}
