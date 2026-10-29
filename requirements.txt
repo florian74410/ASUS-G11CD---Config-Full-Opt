@@ -1,1 +1,1 @@
-artifact-tool
+XlsxWriter>=3.1,<4
