@@ -1,20 +1,37 @@
-# ASUS G11CD — Full Opt 🛠️
+# ASUS G11CD — CONFIG FULL OPT 🔧
 
-Inventaire et comparaison de composants pour le projet ASUS G11CD.
+Base de données matérielle locale : **un JSON par référence, un tableau de bord unique**.
 
-**Le seul fichier à ouvrir : [Configuration.xlsx](Configuration.xlsx)** (généré automatiquement).
+## 🖥️ Dashboard Web local (recommandé)
 
-**Source de vérité :** fichiers `Component/<Famille>/<Nom_complet>.json`, une référence par JSON. Les photos correspondantes utilisent `Assets/<Famille>/<Nom_complet>.jpg` ou `.png`.
+Sous Linux Mint, après `git clone` ou `git pull` :
 
-### Mettre à jour le tableur (Linux Mint)
+```bash
+python3 scripts/serve.py
+```
+
+Ouvrir **http://127.0.0.1:8765** dans Firefox. Pour arrêter : `Ctrl+C`.
+
+- Tableau de bord : compteurs, budget et répartition par catégorie
+- Inventaire : tous les composants, recherche et filtres
+- Budget : acquisitions réelles et frais de livraison, sans confondre avec les offres
+- Une page par catégorie : CPU, GPU, Motherboard, NVMe, SDD, PSU, Extra, Case, RAM, Cooling
+- Clic sur un composant : caractéristiques, benchmarks, FPS, sources, prix et compatibilité
+- **Actualiser les JSON** : recharge toutes les fiches immédiatement, sans refaire le classeur
+- Toute photo dans `Assets/<Categorie>/<Nom_du_JSON>.jpg` ou `.png` s'affiche automatiquement
+
+Le serveur n'écoute que sur **127.0.0.1** par défaut. L'interface n'envoie aucune donnée à un service tiers.
+
+## 📊 Export Excel facultatif
+
+`Configuration.xlsx` est régénéré à chaque ajout/changement de JSON par GitHub Actions ou localement :
+
 ```bash
 python3 -m pip install -r requirements.txt
 python3 scripts/sync_components.py
 libreoffice --calc Configuration.xlsx
 ```
 
-Ne pas modifier le classeur pour saisir des composants : le prochain lancement le régénère entièrement. Modifier plutôt les JSON.
+**Les JSON de `Component/` sont la seule source de vérité.** Les modifications manuelles du classeur seront écrasées lors de sa régénération.
 
-Feuilles : TABLEAU DE BORD, INVENTAIRE, BUDGET, CPU, GPU, Motherboard, NVMe, SDD, PSU, Extra, Case, RAM, Cooling et GUIDE.
-
-Voir [DOCUMENTATION.md](DOCUMENTATION.md) et [ROADMAD.md](ROADMAD.md).
+Documentation : [DOCUMENTATION.md](DOCUMENTATION.md) · [Budget](BUDGET.md) · [Roadmap](ROADMAD.md).
