@@ -1,0 +1,41 @@
+{
+  "category": "CPU",
+  "specifications": {
+    "socket": null,
+    "architecture": null,
+    "cores": null,
+    "threads": null,
+    "base_ghz": null,
+    "boost_ghz": null,
+    "l2_cache_mb": null,
+    "l3_cache_mb": null,
+    "tdp_w": null,
+    "ppt_w": null,
+    "memory_types": null,
+    "pcie_version": null,
+    "integrated_graphics": null,
+    "max_temp_c": null
+  },
+  "performance": {
+    "benchmarks": [
+      {
+        "metric": "",
+        "value": null,
+        "unit": "",
+        "test": "",
+        "source_url": "",
+        "measured_at": ""
+      }
+    ],
+    "gaming_fps": [
+      {
+        "game": "",
+        "resolution": "",
+        "preset": "",
+        "avg_fps": null,
+        "p1_low_fps": null,
+        "source_url": ""
+      }
+    ]
+  }
+}

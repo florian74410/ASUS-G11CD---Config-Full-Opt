@@ -1,0 +1,38 @@
+{
+  "category": "SDD",
+  "specifications": {
+    "capacity_gb": null,
+    "form_factor": null,
+    "interface": null,
+    "nand_type": null,
+    "dram_cache": null,
+    "read_mbs": null,
+    "write_mbs": null,
+    "random_read_iops": null,
+    "random_write_iops": null,
+    "tbw": null,
+    "warranty_years": null
+  },
+  "performance": {
+    "benchmarks": [
+      {
+        "metric": "",
+        "value": null,
+        "unit": "",
+        "test": "",
+        "source_url": "",
+        "measured_at": ""
+      }
+    ],
+    "gaming_fps": [
+      {
+        "game": "",
+        "resolution": "",
+        "preset": "",
+        "avg_fps": null,
+        "p1_low_fps": null,
+        "source_url": ""
+      }
+    ]
+  }
+}

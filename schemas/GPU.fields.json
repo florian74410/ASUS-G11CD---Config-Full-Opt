@@ -1,0 +1,43 @@
+{
+  "category": "GPU",
+  "specifications": {
+    "chipset": null,
+    "architecture": null,
+    "vram_gb": null,
+    "vram_type": null,
+    "memory_bus_bits": null,
+    "bandwidth_gbs": null,
+    "cuda_or_shader_cores": null,
+    "rt_cores": null,
+    "tensor_cores": null,
+    "boost_mhz": null,
+    "tgp_w": null,
+    "length_mm": null,
+    "height_mm": null,
+    "thickness_slots": null,
+    "power_connectors": null,
+    "video_outputs": null
+  },
+  "performance": {
+    "benchmarks": [
+      {
+        "metric": "",
+        "value": null,
+        "unit": "",
+        "test": "",
+        "source_url": "",
+        "measured_at": ""
+      }
+    ],
+    "gaming_fps": [
+      {
+        "game": "",
+        "resolution": "",
+        "preset": "",
+        "avg_fps": null,
+        "p1_low_fps": null,
+        "source_url": ""
+      }
+    ]
+  }
+}

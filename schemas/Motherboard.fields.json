@@ -1,0 +1,41 @@
+{
+  "category": "Motherboard",
+  "specifications": {
+    "form_factor": null,
+    "socket": null,
+    "chipset": null,
+    "bios_version": null,
+    "supported_cpus": null,
+    "ram_slots": null,
+    "ram_max_gb": null,
+    "ram_speed_mts": null,
+    "pcie_slots": null,
+    "m2_slots": null,
+    "sata_ports": null,
+    "usb_headers": null,
+    "fan_headers": null,
+    "power_connectors": null
+  },
+  "performance": {
+    "benchmarks": [
+      {
+        "metric": "",
+        "value": null,
+        "unit": "",
+        "test": "",
+        "source_url": "",
+        "measured_at": ""
+      }
+    ],
+    "gaming_fps": [
+      {
+        "game": "",
+        "resolution": "",
+        "preset": "",
+        "avg_fps": null,
+        "p1_low_fps": null,
+        "source_url": ""
+      }
+    ]
+  }
+}

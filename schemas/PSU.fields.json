@@ -1,0 +1,41 @@
+{
+  "category": "PSU",
+  "specifications": {
+    "nominal_w": null,
+    "standard": null,
+    "certification": null,
+    "atx_version": null,
+    "modular": null,
+    "pcie_6plus2_count": null,
+    "pcie_12vhpwr_count": null,
+    "efficiency_20_pct": null,
+    "efficiency_50_pct": null,
+    "efficiency_100_pct": null,
+    "rails_12v_a": null,
+    "protections": null,
+    "length_mm": null,
+    "fan_mm": null
+  },
+  "performance": {
+    "benchmarks": [
+      {
+        "metric": "",
+        "value": null,
+        "unit": "",
+        "test": "",
+        "source_url": "",
+        "measured_at": ""
+      }
+    ],
+    "gaming_fps": [
+      {
+        "game": "",
+        "resolution": "",
+        "preset": "",
+        "avg_fps": null,
+        "p1_low_fps": null,
+        "source_url": ""
+      }
+    ]
+  }
+}

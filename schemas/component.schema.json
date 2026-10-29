@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "G11CD component",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "id",
+    "category",
+    "full_name",
+    "specifications",
+    "performance",
+    "pricing"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "category": {
+      "enum": [
+        "CPU",
+        "GPU",
+        "Motherboard",
+        "NVMe",
+        "SDD",
+        "PSU",
+        "Extra"
+      ]
+    },
+    "manufacturer": {
+      "type": "string"
+    },
+    "model": {
+      "type": "string"
+    },
+    "full_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "enum": [
+        "candidate",
+        "shortlisted",
+        "purchased",
+        "installed",
+        "rejected"
+      ]
+    },
+    "specifications": {
+      "type": "object"
+    },
+    "performance": {
+      "type": "object"
+    },
+    "pricing": {
+      "type": "object",
+      "properties": {
+        "new_eur": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "used_eur": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "acquisition_eur": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "shipping_eur": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0
+        }
+      }
+    },
+    "compatibility": {
+      "type": "object"
+    },
+    "sources": {
+      "type": "array"
+    },
+    "asset": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

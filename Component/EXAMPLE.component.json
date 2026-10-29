@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0",
+  "id": "",
+  "category": "",
+  "manufacturer": "",
+  "model": "",
+  "full_name": "",
+  "status": "candidate",
+  "specifications": {},
+  "performance": {
+    "benchmarks": [],
+    "gaming_fps": [],
+    "measurements": []
+  },
+  "pricing": {
+    "new_eur": null,
+    "used_eur": null,
+    "acquisition_eur": null,
+    "shipping_eur": null,
+    "acquired": false,
+    "shop": "",
+    "url": "",
+    "checked_at": ""
+  },
+  "compatibility": {
+    "status": "unverified",
+    "notes": ""
+  },
+  "sources": [],
+  "asset": "",
+  "notes": "",
+  "updated_at": ""
+}

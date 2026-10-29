@@ -1,0 +1,35 @@
+{
+  "category": "Extra",
+  "specifications": {
+    "component_type": null,
+    "interface": null,
+    "size_mm": null,
+    "power_w": null,
+    "voltage_v": null,
+    "connectors": null,
+    "dimensions_mm": null,
+    "features": null
+  },
+  "performance": {
+    "benchmarks": [
+      {
+        "metric": "",
+        "value": null,
+        "unit": "",
+        "test": "",
+        "source_url": "",
+        "measured_at": ""
+      }
+    ],
+    "gaming_fps": [
+      {
+        "game": "",
+        "resolution": "",
+        "preset": "",
+        "avg_fps": null,
+        "p1_low_fps": null,
+        "source_url": ""
+      }
+    ]
+  }
+}
