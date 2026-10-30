@@ -100,8 +100,21 @@
     {
       "type": "product_specs",
       "url": "https://www.newegg.com/evga-11g-p4-2384-kr-geforce-rtx-2080-ti-11gb-graphics-card-hybrid-cooler/p/N82E16814487432"
+    },
+    {
+      "type": "manufacturer_specification",
+      "url": "https://media.dustin.eu/media/d200001001289315/geforce-rtx-2080-ti-xc-hybrid-gaming-productdatasheetbrochure.pdf"
     }
   ],
   "notes": "Identification visuelle à très forte ressemblance avec EVGA XC HYBRID Gaming; SKU final non prouvé par la seule photo. Ne pas confondre avec EVGA FTW3 HYBRID, XC2 ou version air. Aucun prix volontairement saisi.",
-  "updated_at": "2026-10-30"
+  "updated_at": "2026-10-30",
+  "images": [
+    {
+      "url": "https://m.media-amazon.com/images/I/61imJFDmiLL.jpg",
+      "view": "angle",
+      "label": "Carte + radiateur AIO",
+      "source": "https://snapklik.com/en-ca/product/evga-geforce-rtx-2080-ti-xc-hybrid-gaming-11gb-gddr6-hybrid-and-rgb-led-graphics-card-11g-p4-2384-kr-renewed/08JK4PD7J0HZ5",
+      "license": "external-only; rights not verified"
+    }
+  ]
 }
