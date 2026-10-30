@@ -107,7 +107,7 @@ function openDetail(id){
  '<section class="tech-panel"><h3>▣ Spécifications techniques</h3>'+techTiles(d.specifications)+'</section></div></div>'+
  '<div class="component-secondary"><section class="tech-panel"><h3>◉ Prix et acquisition</h3><div class="tech-prices">'+pricing+'</div></section>'+
  '<section class="tech-panel"><h3>⌁ Performances</h3>'+(Object.values(d.performance||{}).some(v=>Array.isArray(v)?v.length:!!v)?techTiles(d.performance):'<p class="muted">Aucun benchmark mesuré pour cette référence.</p>')+'</section>'+
- '<section class="tech-panel"><h3>✦ Notes & documentation</h3><p>'+esc(d.notes||"Aucune description validée pour le moment.")+'</p><div class="source-links">'+sourceLinks+'</div><small class="spec-path">'+esc(d._json||"")+'</small></section></div>';
+ '<section class="tech-panel"><h3>✦ Description technique</h3><p class="technical-prose">'+esc(d.technical_description||d.description_technical||d.notes||"Description complète à documenter pour cette référence.")+'</p>'+(d.technologies?.length?'<div class="tech-pills">'+d.technologies.map(t=>'<span>'+esc(t)+'</span>').join('')+'</div>':'')+'<h4 class="tech-subheading">Technologies embarquées</h4>'+explainTech(d)+'<div class="source-links">'+sourceLinks+'</div><small class="spec-path">'+esc(d._json||"")+'</small></section></div>';
  $("modal").classList.remove("hidden");document.body.classList.add("detail-open");bindGallery();$("closemodal").focus();
 }
 $("closemodal").onclick=$("closeback").onclick=()=>{ $("modal").classList.add("hidden");document.body.classList.remove("detail-open");previousFocus?.focus?.(); };
