@@ -3,3 +3,8 @@ __pycache__/
 .venv/
 *.tmp
 ~$*.xlsx
+
+# Private account databases and session data — NEVER commit
+.hardware-lab-private/
+*.sqlite3-wal
+*.sqlite3-shm
