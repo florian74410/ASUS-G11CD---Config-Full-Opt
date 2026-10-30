@@ -33,7 +33,7 @@ function openDetail(id){
  const gallery=photos.length?'<div class="detail-gallery">'+photos.map((url,i)=>'<img loading="lazy" src="'+esc(url)+'" alt="'+esc(d.full_name)+' - vue '+(i+1)+'">').join("")+'</div>':'<div class="detail-photo-missing">▣ &nbsp; Photographie non disponible dans Assets/'+esc(d.category)+'</div>';
  const prices={Neuf:euros(p.new_eur),Occasion:euros(p.used_eur),Acquisition:euros(p.acquisition_eur),Livraison:euros(p.shipping_eur),"Total payé":euros(cost(d))};
  const perf=d.performance||{};let perfText=Object.values(perf).some(v=>Array.isArray(v)?v.length:!!v)?detailsGrid(perf):'<p class="muted">Aucune mesure de performance validée.</p>';
- const sourceLinks=(d.sources||[]).map((x,i)=>{const url=typeof x==="string"?x:x.url;return /^https?:\\/\\//.test(url||"")?'<a href="'+esc(url)+'" rel="noopener noreferrer" target="_blank">Source '+(i+1)+' ↗</a>':""}).join(" ");
+ const sourceLinks=(d.sources||[]).map((x,i)=>{const url=typeof x==="string"?x:x.url;return (typeof url==="string"&&(url.startsWith("https://")||url.startsWith("http://")))?'<a href="'+esc(url)+'" rel="noopener noreferrer" target="_blank">Source '+(i+1)+' ↗</a>':""}).join(" ");
  $("modal-content").innerHTML='<div class="kicker">'+esc(d.category)+' · '+esc(d.manufacturer||"")+'</div><h2>'+esc(d.full_name)+'</h2>'+status(d)+gallery+
  '<h3 class="spec-title">Informations générales</h3>'+detailsGrid({Fabricant:d.manufacturer,Modèle:d.model,Référence:d.id,Statut:d.status,Compatibilité:d.compatibility?.status})+
  '<h3 class="spec-title">Caractéristiques techniques</h3>'+detailsGrid(d.specifications)+
