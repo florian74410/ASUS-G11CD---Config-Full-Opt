@@ -1,6 +1,10 @@
 name: Import verified component photographs
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/import_commons_photos.py'
+      - '.github/workflows/import-photos.yml'
 permissions:
   contents: write
 jobs:
