@@ -87,3 +87,17 @@ function openListing(d){
     try{const res=await fetch("/api/listings/"+d.listing_id,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload)});const response=await res.json();if(!res.ok)throw Error(response.error);await renderMarketplace();openListing(response);}catch(e){$("marketfeedback").textContent=e.message;}
   };
 }
+
+/* Appearance V1: theme choice is stored locally and never sent to server. */
+(function(){
+  const themes=new Set(["native","dark","classic","hardware","matrix"]);
+  const selector=document.getElementById("theme-select");
+  function apply(value){
+    const theme=themes.has(value)?value:"classic";
+    document.documentElement.dataset.theme=theme;
+    if(selector) selector.value=theme;
+    try{localStorage.setItem("g11cd-theme",theme);}catch(e){}
+  }
+  apply(document.documentElement.dataset.theme);
+  if(selector)selector.addEventListener("change",()=>apply(selector.value));
+})();
