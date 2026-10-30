@@ -1,0 +1,27 @@
+name: Audit hardware catalogue
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'Component/**/*.json'
+      - 'scripts/audit_catalogue.py'
+permissions:
+  contents: write
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+      - run: python3 scripts/audit_catalogue.py
+      - name: Publish audit reports
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add CATALOGUE_AUDIT.md CATALOGUE_AUDIT.csv
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: refresh catalogue completeness audit"
+            git pull --rebase origin "${{ github.ref_name }}"
+            git push origin HEAD:"${{ github.ref_name }}"
+          fi
