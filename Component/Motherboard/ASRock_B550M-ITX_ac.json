@@ -92,6 +92,14 @@
       "label": "Boîte et connectique",
       "source": "https://kuwait.microless.com/product/asrock-b550m-itx-ac-amd-2ddr4-4sata3-g-socket-am4-motherboard-90-mxbdh0-aouayz/",
       "license": "external-only; rights not verified"
+    },
+    {
+      "url": "https://e-catalog.com/jpg_zoom1/1802749.jpg",
+      "source": "https://e-catalog.com/ASROCK-B550M-ITX-AC.htm",
+      "label": "Vue de face",
+      "view": "front",
+      "license": "external-only: reuse permission not confirmed",
+      "download_policy": "local_preview_only"
     }
   ],
   "technical_description": "Carte mère Mini-ITX 170 × 170 mm à chipset AMD B550 et socket AM4. Elle permet de monter un PC compact Ryzen avec deux emplacements DDR4, une carte graphique PCIe x16, un SSD M.2 NVMe ou SATA et quatre disques SATA supplémentaires. Avec les Ryzen Vermeer/Matisse compatibles, le slot graphique et le M.2 peuvent fonctionner en PCIe 4.0 ; les APU utilisent selon génération des lignes PCIe 3.0. Réseau Gigabit Realtek, Wi-Fi 5 double bande et Bluetooth 4.2 sont intégrés. Les sorties HDMI et DisplayPort dépendent de la présence d'un GPU intégré dans le processeur. Audio HD Realtek 7.1, connectique USB Type-A et Type-C, surveillance et réglage des ventilateurs via UEFI. Pour une configuration, contrôler BIOS/CPU, hauteur du refroidissement, stockage disponible, alimentation et format de boîtier. Un seul port M.2 de stockage est prévu : l'emplacement M.2 Key E distinct sert au Wi-Fi.",
