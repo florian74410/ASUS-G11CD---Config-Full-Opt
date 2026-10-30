@@ -14,24 +14,33 @@
     "chipset": "AMD B550",
     "memory_type": "DDR4",
     "pcie_minimum_generation": 3,
-    "pcie_generation_exact": null,
+    "pcie_generation_exact": 4,
     "dimensions_mm": "170 × 170",
     "memory_slots": 2,
     "pcie_gen": 4,
     "pcie_slots": "1 × PCIe 4.0 x16",
     "sata_ports": 4,
     "m2_slots": 1,
-    "m2_interface": "PCIe 4.0 x4 ou SATA3",
+    "m2_interface": "1 × PCIe 4.0 x4 / SATA3 (selon CPU)",
     "max_memory_overclock_mts": "4733+ (OC)",
     "lan": "Realtek Gigabit Ethernet",
-    "wifi": "802.11ac",
+    "wifi": "802.11ac (Wi-Fi 5), jusqu'à 433 Mb/s",
     "bluetooth": "4.2",
-    "audio": "Realtek ALC887/897 7.1",
+    "audio": "Realtek ALC887/897 7.1 canaux",
     "rear_video": [
       "HDMI",
       "DisplayPort 1.4"
     ],
-    "rear_usb": "2 × USB 2.0 ; 3 × USB 3.2 Gen1 Type-A ; 1 × USB 3.2 Gen1 Type-C"
+    "rear_usb": "2 × USB 2.0 ; 3 × USB 3.2 Gen1 Type-A ; 1 × USB 3.2 Gen1 Type-C",
+    "lan_controller": "Realtek RTL8111H Gigabit Ethernet",
+    "memory_max_overclock_mts": "4733+ (OC)",
+    "rear_usb_2_type_a": 2,
+    "rear_usb_3_2_gen1_type_a": 3,
+    "rear_usb_3_2_gen1_type_c": 1,
+    "rear_displayport": "DisplayPort 1.4",
+    "rear_hdmi": "HDMI (APU requis)",
+    "power_phase_design": 8,
+    "dimension_mm": "170 × 170"
   },
   "performance": {
     "benchmarks": [],
@@ -58,6 +67,10 @@
     {
       "type": "manufacturer_specification",
       "url": "https://www.asrock.com/mb/AMD/B550M-ITXac/index.fr.asp"
+    },
+    {
+      "type": "manufacturer_official",
+      "url": "https://www.asrock.com/mb/AMD/B550M-ITXac/index.fr.asp"
     }
   ],
   "data_quality": {
@@ -81,5 +94,17 @@
       "license": "external-only; rights not verified"
     }
   ],
-  "technical_description": "Carte mère Mini-ITX au socket AM4, dotée du chipset AMD B550, destinée aux machines compactes. Un emplacement PCIe 4.0 x16 reçoit la carte graphique, tandis qu’un emplacement M.2 PCIe 4.0 x4/SATA et quatre ports SATA3 servent au stockage. Deux logements DDR4 assurent la mémoire système. Les sorties HDMI et DisplayPort sont disponibles avec un processeur doté d’un circuit graphique compatible. Réseau Realtek Gigabit, Wi-Fi 802.11ac, Bluetooth 4.2 et audio Realtek ALC887/897 7.1 canaux. Les prises en charge CPU dépendent de la version BIOS et de la liste de compatibilité ASRock."
+  "technical_description": "Carte mère Mini-ITX 170 × 170 mm à chipset AMD B550 et socket AM4. Elle permet de monter un PC compact Ryzen avec deux emplacements DDR4, une carte graphique PCIe x16, un SSD M.2 NVMe ou SATA et quatre disques SATA supplémentaires. Avec les Ryzen Vermeer/Matisse compatibles, le slot graphique et le M.2 peuvent fonctionner en PCIe 4.0 ; les APU utilisent selon génération des lignes PCIe 3.0. Réseau Gigabit Realtek, Wi-Fi 5 double bande et Bluetooth 4.2 sont intégrés. Les sorties HDMI et DisplayPort dépendent de la présence d'un GPU intégré dans le processeur. Audio HD Realtek 7.1, connectique USB Type-A et Type-C, surveillance et réglage des ventilateurs via UEFI. Pour une configuration, contrôler BIOS/CPU, hauteur du refroidissement, stockage disponible, alimentation et format de boîtier. Un seul port M.2 de stockage est prévu : l'emplacement M.2 Key E distinct sert au Wi-Fi.",
+  "use_cases": [
+    "PC gaming Mini-ITX avec GPU dédié",
+    "HTPC compact avec APU compatible",
+    "Station bureautique et multimédia",
+    "Petit serveur domestique avec stockage SATA"
+  ],
+  "limitations": [
+    "Un seul connecteur M.2 de stockage",
+    "Port PCIe x16 : génération dépendante du CPU",
+    "Sorties vidéo inactives sans processeur graphique intégré",
+    "Compatibilité processeur dépendante du BIOS"
+  ]
 }
