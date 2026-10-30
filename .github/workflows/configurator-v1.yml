@@ -1,0 +1,32 @@
+name: Hardware Lab Configurator V1 validation
+on:
+  push:
+    branches:
+      - feature/configurator-v1
+  pull_request:
+    paths:
+      - 'scripts/configurator_store.py'
+      - 'scripts/serve.py'
+      - 'tests/test_configurator_store.py'
+      - 'web/configurator.js'
+      - 'web/index.html'
+      - 'web/assets/icons.svg'
+permissions:
+  contents: read
+jobs:
+  configurator:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Python syntax
+        run: python3 -m py_compile scripts/configurator_store.py scripts/serve.py tests/test_configurator_store.py
+      - name: JavaScript syntax
+        run: |
+          node --check web/configurator.js
+          node --check web/app.js
+      - name: Account isolation, persistence, and share security
+        run: python3 -m unittest discover -s tests -p 'test_configurator_store.py' -v
