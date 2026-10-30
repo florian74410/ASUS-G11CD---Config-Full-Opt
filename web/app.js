@@ -173,7 +173,7 @@ function initMatrixRain(){
  for(let i=0;i<count;i++){
    const el=document.createElement("span");el.className="matrix-rain-column";
    let bin="";const length=18+(i*7%25);
-   for(let j=0;j<length;j++)bin+=((i*17+j*13+j*j)%7<3?"1":"0")+"\\n";
+   for(let j=0;j<length;j++)bin+=((i*17+j*13+j*j)%7<3?"1":"0")+"\n";
    el.textContent=bin;
    el.style.left=(i+.5)/count*100+"%";
    el.style.animationDuration=(10+(i*7%16))+"s";
