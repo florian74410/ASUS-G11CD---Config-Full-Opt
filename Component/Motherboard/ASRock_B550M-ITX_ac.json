@@ -11,10 +11,27 @@
   "specifications": {
     "form_factor": "Mini-ITX",
     "socket": "AM4",
-    "chipset": "B550",
+    "chipset": "AMD B550",
     "memory_type": "DDR4",
     "pcie_minimum_generation": 3,
-    "pcie_generation_exact": null
+    "pcie_generation_exact": null,
+    "dimensions_mm": "170 × 170",
+    "memory_slots": 2,
+    "pcie_gen": 4,
+    "pcie_slots": "1 × PCIe 4.0 x16",
+    "sata_ports": 4,
+    "m2_slots": 1,
+    "m2_interface": "PCIe 4.0 x4 ou SATA3",
+    "max_memory_overclock_mts": "4733+ (OC)",
+    "lan": "Realtek Gigabit Ethernet",
+    "wifi": "802.11ac",
+    "bluetooth": "4.2",
+    "audio": "Realtek ALC887/897 7.1",
+    "rear_video": [
+      "HDMI",
+      "DisplayPort 1.4"
+    ],
+    "rear_usb": "2 × USB 2.0 ; 3 × USB 3.2 Gen1 Type-A ; 1 × USB 3.2 Gen1 Type-C"
   },
   "performance": {
     "benchmarks": [],
@@ -37,7 +54,12 @@
     "notes": "À vérifier pour chaque projet"
   },
   "asset": "",
-  "sources": [],
+  "sources": [
+    {
+      "type": "manufacturer_specification",
+      "url": "https://www.asrock.com/mb/AMD/B550M-ITXac/index.fr.asp"
+    }
+  ],
   "data_quality": {
     "status": "partial",
     "checked_at": "2026-10-30",
@@ -49,5 +71,15 @@
       "Measured benchmarks"
     ]
   },
-  "notes": "Fiche catalogue initiale, compléter uniquement avec données vérifiées."
+  "notes": "Fiche catalogue initiale, compléter uniquement avec données vérifiées.",
+  "images": [
+    {
+      "url": "https://microless.com/cdn/products/fc7311fa27729713a030440987d9559e-hi.jpg",
+      "view": "packaging",
+      "label": "Boîte et connectique",
+      "source": "https://kuwait.microless.com/product/asrock-b550m-itx-ac-amd-2ddr4-4sata3-g-socket-am4-motherboard-90-mxbdh0-aouayz/",
+      "license": "external-only; rights not verified"
+    }
+  ],
+  "technical_description": "Carte mère Mini-ITX au socket AM4, dotée du chipset AMD B550, destinée aux machines compactes. Un emplacement PCIe 4.0 x16 reçoit la carte graphique, tandis qu’un emplacement M.2 PCIe 4.0 x4/SATA et quatre ports SATA3 servent au stockage. Deux logements DDR4 assurent la mémoire système. Les sorties HDMI et DisplayPort sont disponibles avec un processeur doté d’un circuit graphique compatible. Réseau Realtek Gigabit, Wi-Fi 802.11ac, Bluetooth 4.2 et audio Realtek ALC887/897 7.1 canaux. Les prises en charge CPU dépendent de la version BIOS et de la liste de compatibilité ASRock."
 }
