@@ -255,3 +255,15 @@ body.detail-open{overflow:hidden}
 .tech-compact-body strong{font-size:12px;color:var(--ink);font-weight:650}
 .tech-compact-body small{font-size:11px;color:var(--muted);line-height:1.35}
 @media(max-width:600px){.tech-compact-list{max-height:280px}.tech-disclosure summary{padding:9px}}
+
+
+/* Dark hardware pictograms on intentionally light contrasting badges */
+:root[data-theme="matrix"]{--hw-icon-bg:#c6f8da;--hw-icon-stroke:#08120d;--hw-icon-border:#73dca5}
+:root[data-theme="cyberpunk"]{--hw-icon-bg:#b9eff9;--hw-icon-stroke:#08131a;--hw-icon-border:#79cadb}
+:root[data-theme="dark"]{--hw-icon-bg:#dce3ec;--hw-icon-stroke:#0d1117;--hw-icon-border:#a5b1c0}
+:root[data-theme="classic"]{--hw-icon-bg:#f1dce7;--hw-icon-stroke:#121017;--hw-icon-border:#d3a5be}
+:root[data-theme="hardware"]{--hw-icon-bg:#efd4a0;--hw-icon-stroke:#161309;--hw-icon-border:#bf9d5c}
+:root[data-theme="native"]{--hw-icon-bg:#e0eaf4;--hw-icon-stroke:#111820;--hw-icon-border:#b3c9dc}
+.tech-icon,.explain-icon{background:var(--hw-icon-bg)!important;color:var(--hw-icon-stroke)!important;border:1px solid var(--hw-icon-border)!important;box-shadow:inset 0 1px #ffffff88,0 2px 7px #0004!important;text-shadow:none!important}
+.tech-icon .hw-svg,.explain-icon .hw-svg{color:var(--hw-icon-stroke);stroke:currentColor;stroke-width:1.85;filter:none}
+:root[data-theme="matrix"] .tech-icon,:root[data-theme="matrix"] .explain-icon{filter:none!important}
