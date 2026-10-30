@@ -62,7 +62,9 @@ def main():
                 if candidates:photo=str(sorted(candidates)[0].relative_to(ROOT))
             sources=d.get("sources") or []
             links=[v if isinstance(v,str) else (v.get("url") or "") for v in sources]
-            official=next((v for v in links if v.startswith("https://") or v.startswith("http://")),"")
+            manufacturer_domains={"AMD":["amd.com"],"Intel":["intel.com"],"NVIDIA":["nvidia.com"],"ASUS":["asus.com"],"MSI":["msi.com"],"Gigabyte":["gigabyte.com"],"ASRock":["asrock.com"],"EVGA":["evga.com"],"Corsair":["corsair.com"],"Samsung":["samsung.com"],"Crucial":["crucial.com"],"Kingston":["kingston.com"],"Seasonic":["seasonic.com"],"WD":["westerndigital.com"],"Cooler Master":["coolermaster.com"],"be quiet!":["bequiet.com"]}
+            brand=d.get("manufacturer","")
+            official=next((v for v in links if v.startswith(("https://","http://")) and any(domain in v.lower().split("/")[2] for domain in manufacturer_domains.get(brand,[]))),"")
             values=[d.get("full_name",""),label,form,s.get("cores"),s.get("threads"),s.get("socket"),s.get("capacity_gb") or s.get("vram_gb") or s.get("nominal_w"),desc,new,nnew,used,nused,pr.get("acquisition_eur"),pr.get("shipping_eur"),d.get("status",""),photo,official,str(p.relative_to(ROOT))]
             if category_col:values.insert(0,category)
             for col,v in enumerate(values):
@@ -73,7 +75,7 @@ def main():
                     if cols[col]=="Photos" and not v.startswith("http"):
                         path=ROOT/v
                         if path.is_file():
-                            ws.write_url(row,col,path.resolve().as_uri(),body,v)
+                            ws.write_url(row,col,"external:"+v,body,v)
                         else:ws.write(row,col,v,body)
                     elif v.startswith(("http://","https://")):ws.write_url(row,col,v,body,"Ouvrir "+cols[col].lower())
                     else:ws.write(row,col,v,body)
