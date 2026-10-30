@@ -76,5 +76,15 @@
     "AMD Ryzen Master",
     "AMD StoreMI",
     "PCIe 4.0"
+  ],
+  "images": [
+    {
+      "url": "https://nvs.tn-cdn.net/2025/04/cpu-amd-ryzen-5-5600x-tray-new.jpg",
+      "source": "https://nguyenvu.store/linh-kien/cpu/amd-ryzen-5/",
+      "label": "Vue du processeur",
+      "view": "front",
+      "license": "external-only: reuse permission not confirmed",
+      "download_policy": "local_preview_only"
+    }
   ]
 }
