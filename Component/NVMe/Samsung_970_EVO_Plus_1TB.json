@@ -48,5 +48,15 @@
       "Measured benchmarks"
     ]
   },
-  "notes": "Fiche catalogue initiale, compléter uniquement avec données vérifiées."
+  "notes": "Fiche catalogue initiale, compléter uniquement avec données vérifiées.",
+  "images": [
+    {
+      "url": "https://gfx3.senetic.com/akeneo-catalog/f/2/2/e/f22e4311090ce09d7bc0f24f099ad156b6dad8fa_MZ_V7S1T0BW_4.jpg",
+      "view": "product",
+      "label": "SSD 1 To",
+      "source": "https://www.senetic.co.il/product/MZ-V7S1T0BW",
+      "license": "external-only; rights not verified",
+      "variant_note": ""
+    }
+  ]
 }
