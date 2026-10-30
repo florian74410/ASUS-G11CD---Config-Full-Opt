@@ -238,3 +238,20 @@ body.detail-open{overflow:hidden}
 .tech-tile{display:flex;align-items:center;min-height:58px}
 .tech-tile>div{min-width:0;flex:1}
 @media(max-width:650px){.tech-icon{width:30px;height:30px;flex-basis:30px;min-width:30px}.tech-icon .hw-svg{width:18px;height:18px}}
+
+/* Compact technical glossary: native semantic accordion */
+.tech-disclosure{margin:12px 0;border:1px solid var(--line);border-radius:10px;background:var(--card2);overflow:hidden}
+.tech-disclosure summary{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 12px;cursor:pointer;color:var(--accent);font-size:12px;font-weight:750;list-style:none}
+.tech-disclosure summary::-webkit-details-marker{display:none}
+.tech-disclosure summary::before{content:"▸";display:inline-block;transition:transform .15s ease;font-size:12px}
+.tech-disclosure[open] summary::before{transform:rotate(90deg)}
+.tech-disclosure summary span:first-child{flex:1}
+.tech-count{font-size:10px;color:var(--muted);font-weight:500}
+.tech-compact-list{border-top:1px solid var(--line);max-height:360px;overflow-y:auto;padding:4px 9px}
+.tech-compact-row{display:flex;gap:8px;align-items:center;padding:7px 3px;border-bottom:1px solid color-mix(in srgb,var(--line) 65%,transparent)}
+.tech-compact-row:last-child{border-bottom:0}
+.tech-compact-row .explain-icon{width:27px;height:27px;flex:0 0 27px}
+.tech-compact-body{min-width:0;display:flex;flex-direction:column;gap:2px}
+.tech-compact-body strong{font-size:12px;color:var(--ink);font-weight:650}
+.tech-compact-body small{font-size:11px;color:var(--muted);line-height:1.35}
+@media(max-width:600px){.tech-compact-list{max-height:280px}.tech-disclosure summary{padding:9px}}
