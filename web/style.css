@@ -201,3 +201,5 @@ body.detail-open{overflow:hidden}
 .tech-pills{display:flex;gap:6px;flex-wrap:wrap}.tech-pills span{font:11px ui-monospace,monospace;padding:5px 8px;background:var(--card2);border:1px solid var(--line);border-radius:12px;color:var(--accent)}
 @media(max-width:800px){.neon-sign{display:none}.cyber-title{font-size:13px}.topbar{align-items:flex-start}.technical-prose{font-size:12px}}
 @media(prefers-reduced-motion:reduce){.cipher-cursor,.neon-sign,#white-rabbit{animation:none!important}#white-rabbit{display:none!important}}
+
+.explanations{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:7px;margin:9px 0 13px}.explain-row{background:var(--card2);border:1px solid var(--line);border-radius:9px;padding:9px 10px}.explain-row strong{color:var(--accent);font-size:12px}.explain-row p{color:var(--muted);font-size:11px;margin:4px 0 0;line-height:1.5}.tech-subheading{margin:15px 0 7px;font-size:13px;color:var(--accent)}
