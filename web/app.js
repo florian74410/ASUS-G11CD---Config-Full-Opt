@@ -27,23 +27,66 @@ const names={form_factor:"Format",socket:"Socket",chipset:"Chipset",memory_type:
 const fieldName=k=>names[k]||k.replace(/_/g," ").replace(/^./,x=>x.toUpperCase());
 const fieldValue=v=>v===null||v===""||v===undefined?"Non renseigné":typeof v==="boolean"?(v?"Oui":"Non"):Array.isArray(v)?v.map(fieldValue).join(", "):typeof v==="object"?Object.entries(v).map(([k,x])=>fieldName(k)+": "+fieldValue(x)).join(" · "):String(v);
 const detailsGrid=(o)=>'<div class="spec-grid">'+Object.entries(o||{}).filter(([,v])=>v!==undefined&&v!==null&&v!=="").map(([k,v])=>'<div class="spec-field"><small>'+esc(fieldName(k))+'</small><strong>'+esc(fieldValue(v))+'</strong></div>').join("")+'</div>';
-function openDetail(id){
- const d=state.items.find(x=>x.id===id);if(!d)return;
- const p=price(d),photos=d._photos|| (d._photo?[d._photo]:[]);
- const gallery=photos.length?'<div class="detail-gallery">'+photos.map((url,i)=>'<img loading="lazy" src="'+esc(url)+'" alt="'+esc(d.full_name)+' - vue '+(i+1)+'">').join("")+'</div>':'<div class="detail-photo-missing">▣ &nbsp; Photographie non disponible dans Assets/'+esc(d.category)+'</div>';
- const prices={Neuf:euros(p.new_eur),Occasion:euros(p.used_eur),Acquisition:euros(p.acquisition_eur),Livraison:euros(p.shipping_eur),"Total payé":euros(cost(d))};
- const perf=d.performance||{};let perfText=Object.values(perf).some(v=>Array.isArray(v)?v.length:!!v)?detailsGrid(perf):'<p class="muted">Aucune mesure de performance validée.</p>';
- const sourceLinks=(d.sources||[]).map((x,i)=>{const url=typeof x==="string"?x:x.url;return (typeof url==="string"&&(url.startsWith("https://")||url.startsWith("http://")))?'<a href="'+esc(url)+'" rel="noopener noreferrer" target="_blank">Source '+(i+1)+' ↗</a>':""}).join(" ");
- $("modal-content").innerHTML='<div class="kicker">'+esc(d.category)+' · '+esc(d.manufacturer||"")+'</div><h2>'+esc(d.full_name)+'</h2>'+status(d)+gallery+
- '<h3 class="spec-title">Informations générales</h3>'+detailsGrid({Fabricant:d.manufacturer,Modèle:d.model,Référence:d.id,Statut:d.status,Compatibilité:d.compatibility?.status})+
- '<h3 class="spec-title">Caractéristiques techniques</h3>'+detailsGrid(d.specifications)+
- '<h3 class="spec-title">Prix</h3>'+detailsGrid(prices)+
- '<h3 class="spec-title">Performances</h3>'+perfText+
- '<h3 class="spec-title">Notes et sources</h3><p class="muted">'+esc(d.notes||"Aucune note")+'</p><div class="source-links">'+sourceLinks+'</div><p class="muted spec-path">'+esc(d._json||"")+'</p>';
- $("modal").classList.remove("hidden");
+
+let activeGallery=[],galleryIndex=0,galleryZoom=1,galleryMode="photos",previousFocus=null;
+const viewNames=["Avant","Arrière","Profil","Dessus","Connectique","Vue détaillée"];
+const techIcons={form_factor:"▤",socket:"◉",chipset:"▣",memory_type:"▥",vram_gb:"▦",cores:"◈",threads:"◈",capacity_gb:"▰",pcie_gen:"⌁",nominal_w:"ϟ",rpm:"◌",sequential_read_mbs:"↑",sequential_write_mbs:"↓"};
+const techTiles=data=>'<div class="tech-tiles">'+Object.entries(data||{}).filter(([,v])=>v!==null&&v!==undefined&&v!==""&&!(Array.isArray(v)&&!v.length)).map(([k,v])=>'<div class="tech-tile"><span class="tech-icon">'+(techIcons[k]||"⬡")+'</span><div><small>'+esc(fieldName(k))+'</small><strong>'+esc(fieldValue(v))+'</strong></div></div>').join("")+'</div>';
+function galleryViewLabel(i){return activeGallery[i]?.label||viewNames[i]||"Vue "+(i+1)}
+function galleryDisplay(){
+ const img=$("gallery-image"),stage=$("gallery-stage"),count=$("gallery-count"),caption=$("gallery-caption");
+ if(!stage)return;
+ const entry=activeGallery[galleryIndex];
+ if(img){img.hidden=!entry;img.src=entry?.url||"";img.alt=entry?galleryViewLabel(galleryIndex):"";img.style.transform="scale("+galleryZoom+")";}
+ stage.classList.toggle("no-image",!entry);
+ if(count)count.textContent=entry?(galleryIndex+1)+" / "+activeGallery.length:"0 / 0";
+ if(caption)caption.textContent=entry?galleryViewLabel(galleryIndex):"Photo indisponible";
+ document.querySelectorAll(".gallery-thumb").forEach((el,i)=>{el.classList.toggle("active",i===galleryIndex);el.setAttribute("aria-pressed",String(i===galleryIndex));});
+ if($("gallery-zoom-value"))$("gallery-zoom-value").textContent=Math.round(galleryZoom*100)+" %";
 }
-$("closemodal").onclick=$("closeback").onclick=()=>$("modal").classList.add("hidden");
-document.addEventListener("keydown",e=>{if(e.key==="Escape")$("modal").classList.add("hidden")});
+function galleryChoose(i){if(!activeGallery.length)return;galleryIndex=(i+activeGallery.length)%activeGallery.length;galleryZoom=1;galleryDisplay()}
+function galleryAdjust(factor){galleryZoom=Math.min(4,Math.max(1,galleryZoom*factor));galleryDisplay()}
+function setGalleryMode(mode){
+ galleryMode=mode;const el=$("gallery-stage");if(!el)return;
+ el.classList.toggle("rotation-mode",mode==="rotation");
+ $("gallery-mode-label").textContent=mode==="rotation"?"Rotation multi-vues simulée • pas de modèle 3D":"Galerie photographique";
+ $("gallery-mode").textContent=mode==="rotation"?"▣ Revenir aux photos":"⬡ Rotation multi-vues";
+}
+function bindGallery(){
+ const prev=$("gallery-prev"),next=$("gallery-next"),zoomIn=$("gallery-zoom-in"),zoomOut=$("gallery-zoom-out"),reset=$("gallery-reset"),mode=$("gallery-mode"),stage=$("gallery-stage");
+ prev.onclick=()=>galleryChoose(galleryIndex-1);next.onclick=()=>galleryChoose(galleryIndex+1);
+ zoomIn.onclick=()=>galleryAdjust(1.25);zoomOut.onclick=()=>galleryAdjust(.8);
+ reset.onclick=()=>{galleryZoom=1;galleryDisplay()};
+ mode.onclick=()=>setGalleryMode(galleryMode==="rotation"?"photos":"rotation");
+ document.querySelectorAll(".gallery-thumb").forEach(el=>el.onclick=()=>galleryChoose(Number(el.dataset.index)));
+ let startX=null;
+ stage.addEventListener("pointerdown",e=>{if(e.target.closest("button"))return;startX=e.clientX;});
+ stage.addEventListener("pointerup",e=>{if(startX===null)return;const delta=e.clientX-startX;startX=null;if(Math.abs(delta)>45)galleryChoose(galleryIndex+(delta<0?1:-1));});
+ stage.addEventListener("wheel",e=>{if(e.ctrlKey){e.preventDefault();galleryAdjust(e.deltaY<0?1.12:1/1.12)}},{passive:false});
+ galleryDisplay();
+}
+function openDetail(id){
+ const d=state.items.find(x=>x.id===id);if(!d)return;previousFocus=document.activeElement;
+ const p=price(d),raw=d._photos||(d._photo?[d._photo]:[]);
+ activeGallery=raw.map((v,i)=>typeof v==="string"?{url:v,label:viewNames[i]||"Vue "+(i+1)}:v).filter(v=>v.url);
+ galleryIndex=0;galleryZoom=1;galleryMode="photos";
+ const sourceLinks=(d.sources||[]).map((x,i)=>{const url=typeof x==="string"?x:x.url;return typeof url==="string"&&(url.startsWith("https://")||url.startsWith("http://"))?'<a href="'+esc(url)+'" rel="noopener noreferrer" target="_blank">Source '+(i+1)+' ↗</a>':""}).join(" ");
+ const pricing=[["Neuf",p.new_eur],["Occasion",p.used_eur],["Acquisition",p.acquisition_eur],["Livraison",p.shipping_eur]].map(([k,v])=>'<div class="tech-price"><small>'+k+'</small><strong>'+esc(euros(v))+'</strong></div>').join("");
+ const thumb=activeGallery.map((entry,i)=>'<button class="gallery-thumb" type="button" data-index="'+i+'" aria-label="Voir '+esc(entry.label)+'"><img src="'+esc(entry.url)+'" alt="" loading="lazy"><span>'+esc(entry.label)+'</span></button>').join("");
+ $("modal-content").innerHTML=
+ '<div class="component-breadcrumb">⌂ &nbsp; Composants <span>›</span> '+esc(d.category)+' <span>›</span> '+esc(d.model||d.id)+'</div>'+
+ '<div class="component-hero"><div class="component-header"><div class="kicker">'+esc(d.manufacturer||"")+' / '+esc(d.category)+'</div><h2>'+esc(d.full_name)+'</h2><div class="component-header-tags">'+status(d)+'<span class="tech-pill">'+esc(d.specifications?.socket||d.specifications?.form_factor||"Fiche catalogue")+'</span><span class="tech-pill">'+activeGallery.length+' photo(s)</span></div></div></div>'+
+ '<div class="component-layout"><section class="showcase"><div class="gallery-stage" id="gallery-stage"><div class="gallery-grid"></div><img id="gallery-image" alt=""><span class="gallery-placeholder">⬡<small>Photo de cette référence non disponible</small></span><button type="button" id="gallery-prev" class="gallery-arrow left" aria-label="Vue précédente">‹</button><button type="button" id="gallery-next" class="gallery-arrow right" aria-label="Vue suivante">›</button><span id="gallery-count" class="gallery-count"></span><span id="gallery-caption" class="gallery-caption"></span></div>'+
+ '<div class="gallery-thumbs">'+thumb+'</div><div class="gallery-toolbar"><button type="button" id="gallery-mode">⬡ Rotation multi-vues</button><span id="gallery-mode-label">Galerie photographique</span><div class="gallery-zoom"><button type="button" id="gallery-zoom-out" aria-label="Réduire">−</button><span id="gallery-zoom-value">100 %</span><button type="button" id="gallery-zoom-in" aria-label="Agrandir">+</button><button type="button" id="gallery-reset">↺</button></div></div><p class="gallery-note">Rotation simulée à partir des photos disponibles : les vues manquantes ne sont pas inventées.</p></section>'+
+ '<div class="component-info"><section class="tech-panel"><h3>◈ Informations générales</h3>'+detailsGrid({Fabricant:d.manufacturer,Modèle:d.model,Référence:d.id,Catégorie:d.category,Compatibilité:d.compatibility?.status})+'</section>'+
+ '<section class="tech-panel"><h3>▣ Spécifications techniques</h3>'+techTiles(d.specifications)+'</section></div></div>'+
+ '<div class="component-secondary"><section class="tech-panel"><h3>◉ Prix et acquisition</h3><div class="tech-prices">'+pricing+'</div></section>'+
+ '<section class="tech-panel"><h3>⌁ Performances</h3>'+(Object.values(d.performance||{}).some(v=>Array.isArray(v)?v.length:!!v)?techTiles(d.performance):'<p class="muted">Aucun benchmark mesuré pour cette référence.</p>')+'</section>'+
+ '<section class="tech-panel"><h3>✦ Notes & documentation</h3><p>'+esc(d.notes||"Aucune description validée pour le moment.")+'</p><div class="source-links">'+sourceLinks+'</div><small class="spec-path">'+esc(d._json||"")+'</small></section></div>';
+ $("modal").classList.remove("hidden");document.body.classList.add("detail-open");bindGallery();$("closemodal").focus();
+}
+$("closemodal").onclick=$("closeback").onclick=()=>{ $("modal").classList.add("hidden");document.body.classList.remove("detail-open");previousFocus?.focus?.(); };
+document.addEventListener("keydown",e=>{if($("modal").classList.contains("hidden"))return;if(e.key==="Escape")$("closemodal").click();if(e.key==="ArrowRight")galleryChoose(galleryIndex+1);if(e.key==="ArrowLeft")galleryChoose(galleryIndex-1);});
 async function load(){try{const r=await fetch("/api/components?time="+Date.now(),{cache:"no-store"});if(!r.ok)throw Error("HTTP "+r.status);const data=await r.json();state.items=data.components;state.categories=data.categories;state.errors=data.errors;nav();$("warnings").innerHTML=data.errors.length?'<div class="notice">'+data.errors.map(esc).join("<br>")+'</div>':"";$("syncstatus").textContent=state.items.length+" références · actualisé "+new Date().toLocaleTimeString("fr-FR");render();if(state.page==="marketplace")renderMarketplace();}catch(e){$("syncstatus").textContent="Erreur de lecture";$("warnings").innerHTML='<div class="notice">'+esc(e.message)+'</div>';}}
 $("refresh").onclick=load;load();
 
