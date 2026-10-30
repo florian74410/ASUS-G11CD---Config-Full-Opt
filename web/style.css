@@ -179,3 +179,25 @@ body.detail-open{overflow:hidden}
 .gallery-thumb img{height:52px}.component-secondary{gap:10px;margin-top:10px}.tech-price{padding:9px}
 @media(max-width:760px){.component-layout{grid-template-columns:minmax(0,1fr)}.tech-tiles{grid-template-columns:repeat(2,minmax(0,1fr))}.component-secondary{grid-template-columns:1fr}.gallery-stage{height:265px}}
 @media(prefers-reduced-motion:reduce){.matrix-rain-column{animation:none}}
+
+
+/* Atmospheric UI V4: cyberpunk signs, Matrix rabbit, cipher title */
+.cyber-title{display:none;position:relative;max-width:min(100%,620px);font-family:ui-monospace,monospace;font-size:clamp(12px,1.5vw,21px);font-weight:800;letter-spacing:1px;color:var(--accent);min-height:34px;line-height:1.4;overflow-wrap:anywhere;text-shadow:0 0 14px color-mix(in srgb,var(--accent) 55%,transparent)}
+:root[data-theme="matrix"] .cyber-title,:root[data-theme="cyberpunk"] .cyber-title{display:block}
+.cipher-cursor{animation:cyber-cursor .9s steps(1) infinite}
+@keyframes cyber-cursor{50%{opacity:0}}
+#theme-atmosphere{pointer-events:none;position:fixed;inset:0;z-index:0;overflow:hidden;display:none}
+:root[data-theme="cyberpunk"] #theme-atmosphere{display:block;background:radial-gradient(ellipse at 93% 20%,#ff24c917,transparent 33%),radial-gradient(ellipse at 15% 90%,#02f1ed13,transparent 36%)}
+.neon-sign{position:absolute;display:block;font:700 11px ui-monospace,monospace;letter-spacing:2px;border:1px solid currentColor;border-radius:6px;padding:10px 7px;writing-mode:vertical-rl;opacity:.38;animation:sign-pulse 6s ease-in-out infinite}
+.neon-a{right:12px;top:21%;color:#ff61d3;box-shadow:0 0 19px #ff25ca50;text-shadow:0 0 12px #ff22e9}.neon-b{right:34px;bottom:7%;color:#30faff;box-shadow:0 0 21px #15f2e94f;text-shadow:0 0 11px #09e9f0;animation-delay:-2.5s}
+@keyframes sign-pulse{0%,100%{opacity:.26;filter:brightness(.8)}50%{opacity:.65;filter:brightness(1.3)}}
+:root[data-theme="cyberpunk"] .item-card:hover,:root[data-theme="cyberpunk"] .panel:hover{box-shadow:0 0 21px #16d9e939,0 0 8px #fa58ca28}
+:root[data-theme="cyberpunk"] .sidebar nav button.active{border-right:2px solid #fe70d5;box-shadow:inset 0 -2px #21e6dc,0 0 12px #0cbad218}
+#white-rabbit{position:fixed;display:none;pointer-events:none;z-index:4;font-size:34px;line-height:1;opacity:0;filter:drop-shadow(0 0 6px #b8ffe4)}
+:root[data-theme="matrix"] #white-rabbit.rabbit-active{display:block;animation:rabbit-hop 4.3s ease-in-out 1 forwards}
+@keyframes rabbit-hop{0%{transform:translate(-40px,20px) scale(.6);opacity:0}12%{opacity:.85}24%{transform:translate(4px,-38px) scale(.95)}43%{transform:translate(40px,0) scale(.9)}61%{transform:translate(73px,-44px) scale(1)}77%{transform:translate(112px,0) scale(.8);opacity:.8}100%{transform:translate(155px,-20px) scale(.6);opacity:0}}
+.technical-prose{line-height:1.65;max-width:78ch;font-size:13px;letter-spacing:.12px}
+:root[data-theme="cyberpunk"] .technical-prose,:root[data-theme="matrix"] .technical-prose{color:var(--ink)}
+.tech-pills{display:flex;gap:6px;flex-wrap:wrap}.tech-pills span{font:11px ui-monospace,monospace;padding:5px 8px;background:var(--card2);border:1px solid var(--line);border-radius:12px;color:var(--accent)}
+@media(max-width:800px){.neon-sign{display:none}.cyber-title{font-size:13px}.topbar{align-items:flex-start}.technical-prose{font-size:12px}}
+@media(prefers-reduced-motion:reduce){.cipher-cursor,.neon-sign,#white-rabbit{animation:none!important}#white-rabbit{display:none!important}}
