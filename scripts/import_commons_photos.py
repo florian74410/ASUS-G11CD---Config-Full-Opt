@@ -45,7 +45,7 @@ def candidates(query):
         if not re.search(r"CC0|CC BY|Public domain|PD-",lic,re.I):continue
         url=info.get("thumburl") or info.get("url")
         if not url:continue
-        yield title,lic,url,info.get("descriptionurl",""),meta.get("Artist",{}).get("value","")
+        yield title,lic,url,info.get("descriptionurl",""),meta.get("Artist",{}).get("value",""),info.get("url")
 def main():
     ap=argparse.ArgumentParser();ap.add_argument("--limit",type=int,default=45);args=ap.parse_args()
     report={"downloaded":[],"missing":[],"skipped":[],"errors":[]}
@@ -68,13 +68,23 @@ def main():
             if checked>=args.limit:break
             checked+=1
             found=False
-            for title,lic,url,page,artist in candidates(brand+" "+model):
+            for title,lic,url,page,artist,original_url in candidates(brand+" "+model):
                 suffix=Path(urllib.parse.urlparse(url).path).suffix.lower()
                 if suffix not in EXTENSIONS:suffix=".jpg"
                 target=folder/(cat+" - "+brand+" "+model+suffix)
                 data=get_file(url)
                 target.write_bytes(data)
-                report["downloaded"].append({"component":d.get("full_name"),"file":str(target.relative_to(ROOT)),"source":page,"license":lic,"author_html":artist,"bytes":len(data)})
+                original_folder=ROOT/"Assets"/"Brut"/cat
+                original_folder.mkdir(parents=True,exist_ok=True)
+                original_ext=Path(urllib.parse.urlparse(original_url).path).suffix.lower()
+                if original_ext in EXTENSIONS:
+                    original_target=original_folder/(cat+" - "+brand+" "+model+original_ext)
+                    try:
+                        raw=get_file(original_url,limit_bytes=12000000)
+                        original_target.write_bytes(raw)
+                    except Exception as ex:
+                        report["errors"].append({"file":str(original_target.relative_to(ROOT)),"error":"Original not archived: "+str(ex)[:180]})
+                report["downloaded"].append({"component":d.get("full_name"),"file":str(target.relative_to(ROOT)),"source":page,"license":lic,"author_html":artist,"bytes":len(data),"original_url":original_url})
                 found=True;break
             if not found:report["missing"].append({"component":d.get("full_name"),"reason":"No exact-model licensed photo on Wikimedia Commons"})
         except Exception as ex:
