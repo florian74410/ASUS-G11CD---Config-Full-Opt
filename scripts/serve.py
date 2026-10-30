@@ -32,7 +32,7 @@ def find_component_images(cat,path,obj):
                any(unprefixed==base+suffix for base in keys if base for suffix in ("1","2","3","front","back","side")))
         if isinstance(explicit,str) and explicit and image.name==Path(explicit).name:match=True
         if match:found.append("/files/"+quote(str(image.relative_to(ROOT)),safe="/"))
-    return found[:3]
+    return found[:5]
 
 def collect():
     entries=[];errors=[];seen=set()
@@ -46,13 +46,26 @@ def collect():
                 seen.add(obj["id"])
                 obj["_json"]=str(p.relative_to(ROOT))
                 local_photos=find_component_images(cat,p,obj)
-                linked=[]
+                photos=[];urls=set()
+                def add_photo(url,label,**metadata):
+                    if url and url not in urls:
+                        urls.add(url)
+                        photos.append({"url":url,"label":label,**metadata})
                 for entry in obj.get("images",[]):
                     if not isinstance(entry,dict):continue
+                    local=entry.get("gallery_path") or entry.get("local_path")
+                    if isinstance(local,str) and local:
+                        dest=(ROOT/local).resolve()
+                        if dest.is_file() and dest.is_relative_to(ROOT.resolve()):
+                            add_photo("/files/"+quote(local,safe="/"),entry.get("label") or "Vue locale",source=entry.get("source",""),external=False)
+                            continue
                     url=entry.get("url","")
                     if isinstance(url,str) and url.startswith("https://"):
-                        linked.append({"url":url,"label":entry.get("label") or "Photo externe","view":entry.get("view") or "unknown","source":entry.get("source",""),"external":True})
-                photos=[{"url":url,"label":"Photo locale","external":False} for url in local_photos]+linked
+                        add_photo(url,entry.get("label") or "Photo externe",view=entry.get("view") or "unknown",source=entry.get("source",""),external=True)
+                # Locally archived images are preferred and de-duplicated by exact URL.
+                for url in local_photos:
+                    add_photo(url,"Photo locale",external=False)
+                photos.sort(key=lambda pic:pic.get("external",False))
                 obj["_photos"]=photos[:12]
                 obj["_photo"]=photos[0]["url"] if photos else None
                 entries.append(obj)
