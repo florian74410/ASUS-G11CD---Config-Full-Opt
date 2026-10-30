@@ -1,0 +1,773 @@
+{
+  "downloaded": [
+    {
+      "component": "AMD Ryzen 5 1600",
+      "file": "Assets/CPU/CPU - AMD Ryzen 5 1600.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:AMD_Ryzen_5_1600_processor_with_Wraith_Spire_cooler_-_overview.jpg",
+      "license": "CC BY-SA 4.0",
+      "author_html": "ITEagle Europe - Sebastiaan Broekhoven",
+      "bytes": 144811
+    },
+    {
+      "component": "AMD Ryzen 5 2600",
+      "file": "Assets/CPU/CPU - AMD Ryzen 5 2600.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:AMD_Ryzen_5_2600_(39851733273).jpg",
+      "license": "CC0",
+      "author_html": "Fritzchens Fritz",
+      "bytes": 140802
+    },
+    {
+      "component": "AMD Ryzen 5 3600",
+      "file": "Assets/CPU/CPU - AMD Ryzen 5 3600.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:AMD@7nm(12nmIO)@Zen2@Matisse@Ryzen_5_3600@100-000000031_BF_1923SUT_9HM6935R90062_DSCx1.jpg",
+      "license": "CC0",
+      "author_html": "Fritzchens Fritz",
+      "bytes": 411004
+    },
+    {
+      "component": "AMD Ryzen 5 5600X",
+      "file": "Assets/CPU/CPU - AMD Ryzen 5 5600X.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:AMD@7nm(12nmIOD)@Zen3@Vermeer@Ryzen_5_5600X@100-000000064_BG_2042SUS_9JF6228V00014_DSCx3@IR.jpg",
+      "license": "CC BY 2.0",
+      "author_html": "Fritzchens Fritz",
+      "bytes": 163862
+    },
+    {
+      "component": "AMD Ryzen 5 7600",
+      "file": "Assets/CPU/CPU - AMD Ryzen 5 7600.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:AMD@5nmCCD(6nmIOD)@Zen4@Raphael@Ryzen_5_7600@100-000001015_BQ_2246SUY_9LS4795W20142_DSC04053-DSC04175.jpg",
+      "license": "CC0",
+      "author_html": "FritzchensFritz",
+      "bytes": 177222
+    }
+  ],
+  "missing": [
+    {
+      "component": "AMD Ryzen 5 5600",
+      "reason": "No exact-model licensed photo on Wikimedia Commons"
+    },
+    {
+      "component": "AMD Ryzen 5 7600X",
+      "reason": "No exact-model licensed photo on Wikimedia Commons"
+    },
+    {
+      "component": "AMD Ryzen 7 1700X",
+      "reason": "No exact-model licensed photo on Wikimedia Commons"
+    },
+    {
+      "component": "AMD Ryzen 7 2700X",
+      "reason": "No exact-model licensed photo on Wikimedia Commons"
+    },
+    {
+      "component": "AMD Ryzen 7 3700X",
+      "reason": "No exact-model licensed photo on Wikimedia Commons"
+    },
+    {
+      "component": "ASUS ProArt B550-CREATOR",
+      "reason": "No exact-model licensed photo on Wikimedia Commons"
+    },
+    {
+      "component": "ASUS ProArt X670E-CREATOR WIFI",
+      "reason": "No exact-model licensed photo on Wikimedia Commons"
+    },
+    {
+      "component": "ASUS ROG MAXIMUS Z790 HERO",
+      "reason": "No exact-model licensed photo on Wikimedia Commons"
+    },
+    {
+      "component": "ASUS ROG STRIX B550-I GAMING",
+      "reason": "No exact-model licensed photo on Wikimedia Commons"
+    },
+    {
+      "component": "ASUS ROG STRIX B650E-I GAMING WIFI",
+      "reason": "No exact-model licensed photo on Wikimedia Commons"
+    },
+    {
+      "component": "ASUS ROG STRIX Z790-I GAMING WIFI",
+      "reason": "No exact-model licensed photo on Wikimedia Commons"
+    },
+    {
+      "component": "ASUS TUF B450M-PLUS GAMING",
+      "reason": "No exact-model licensed photo on Wikimedia Commons"
+    },
+    {
+      "component": "ASUS TUF GAMING X570-PLUS (WI-FI)",
+      "reason": "No exact-model licensed photo on Wikimedia Commons"
+    },
+    {
+      "component": "Gigabyte B550I AORUS PRO AX",
+      "reason": "No exact-model licensed photo on Wikimedia Commons"
+    },
+    {
+      "component": "Gigabyte B550M DS3H",
+      "reason": "No exact-model licensed photo on Wikimedia Commons"
+    }
+  ],
+  "skipped": [],
+  "errors": [
+    {
+      "file": "Component/CPU/AMD_Ryzen_7_5700X.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/CPU/AMD_Ryzen_7_5700X3D.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/CPU/AMD_Ryzen_7_5800X3D.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/CPU/AMD_Ryzen_7_7700X.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/CPU/AMD_Ryzen_7_7800X3D.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/CPU/AMD_Ryzen_7_9800X3D.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/CPU/AMD_Ryzen_9_5900X.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/CPU/AMD_Ryzen_9_5950X.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/CPU/AMD_Ryzen_9_7950X.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/CPU/Intel_Core_i5-10400.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/CPU/Intel_Core_i5-11400.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/CPU/Intel_Core_i5-12400F.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/CPU/Intel_Core_i5-13400F.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/CPU/Intel_Core_i5-13600K.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/CPU/Intel_Core_i5-14600K.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/CPU/Intel_Core_i7-10700K.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/CPU/Intel_Core_i7-12700K.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/CPU/Intel_Core_i7-13700K.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/CPU/Intel_Core_i7-14700K.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/CPU/Intel_Core_i7-4770.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/CPU/Intel_Core_i7-6700.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/CPU/Intel_Core_i7-7700.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/CPU/Intel_Core_i7-8700.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/CPU/Intel_Core_i7-9700K.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/Case/ASUS_G11CD_FR022T.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/Case/ASUS_Prime_AP201.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/Case/Cooler_Master_Elite_110.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/Case/Cooler_Master_MasterBox_Q300L.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/Case/Cooler_Master_NR200.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/Case/Corsair_4000D_Airflow.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/Case/Fractal_Design_North.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/Case/Fractal_Design_Pop_Mini_Air.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/Case/Fractal_Design_Ridge.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/Case/Fractal_Design_Terra.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/Case/Jonsbo_D31_Mesh.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/Case/Lian_Li_A3-mATX.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/Case/Lian_Li_A4-H2O.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/Case/Lian_Li_O11_Dynamic_EVO.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/Case/NZXT_H5_Flow.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/Case/Phanteks_Eclipse_G360A.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/Case/SilverStone_SG13.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/Case/Thermaltake_Core_V21.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/Case/be_quiet_Pure_Base_500.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/GPU/AMD_Radeon_RX_5700.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/GPU/AMD_Radeon_RX_5700_XT.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/GPU/AMD_Radeon_RX_580.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/GPU/AMD_Radeon_RX_6600.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/GPU/AMD_Radeon_RX_6600_XT.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/GPU/AMD_Radeon_RX_6650_XT.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/GPU/AMD_Radeon_RX_6700.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/GPU/AMD_Radeon_RX_6700_XT.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/GPU/AMD_Radeon_RX_6750_XT.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/GPU/AMD_Radeon_RX_6800.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/GPU/AMD_Radeon_RX_6800_XT.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/GPU/AMD_Radeon_RX_6900_XT.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/GPU/AMD_Radeon_RX_6950_XT.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/GPU/AMD_Radeon_RX_7600.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/GPU/AMD_Radeon_RX_7600_XT.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/GPU/AMD_Radeon_RX_7700_XT.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/GPU/AMD_Radeon_RX_7800_XT.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/GPU/AMD_Radeon_RX_7900_GRE.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/GPU/AMD_Radeon_RX_7900_XT.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/GPU/AMD_Radeon_RX_7900_XTX.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/GPU/AMD_Radeon_RX_9060_XT_16GB.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/GPU/AMD_Radeon_RX_9070.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/GPU/AMD_Radeon_RX_9070_XT.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/GPU/EVGA_RTX_2080_Ti_XC_HYBRID_GAMING_11G-P4-2384-KR.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/GPU/NVIDIA_GeForce_RTX_2060_SUPER.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/GPU/NVIDIA_GeForce_RTX_2070.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/GPU/NVIDIA_GeForce_RTX_2070_SUPER.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/GPU/NVIDIA_GeForce_RTX_2080.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/GPU/NVIDIA_GeForce_RTX_2080_SUPER.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/GPU/NVIDIA_GeForce_RTX_2080_Ti.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/GPU/NVIDIA_GeForce_RTX_3060.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/GPU/NVIDIA_GeForce_RTX_3060_Ti.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/GPU/NVIDIA_GeForce_RTX_3070.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/GPU/NVIDIA_GeForce_RTX_3070_Ti.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/GPU/NVIDIA_GeForce_RTX_3080.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/GPU/NVIDIA_GeForce_RTX_3080_Ti.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/GPU/NVIDIA_GeForce_RTX_3090.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/GPU/NVIDIA_GeForce_RTX_3090_Ti.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/GPU/NVIDIA_GeForce_RTX_4060_Ti_16GB.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/GPU/NVIDIA_GeForce_RTX_4070.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/GPU/NVIDIA_GeForce_RTX_4070_SUPER.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/GPU/NVIDIA_GeForce_RTX_4070_Ti.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/GPU/NVIDIA_GeForce_RTX_4070_Ti_SUPER.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/GPU/NVIDIA_GeForce_RTX_4080.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/GPU/NVIDIA_GeForce_RTX_4080_SUPER.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/GPU/NVIDIA_GeForce_RTX_4090.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/HDD/HGST_Ultrastar_C10K900_900GB.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/HDD/Seagate_BarraCuda_2TB_ST2000DM008.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/HDD/Seagate_Enterprise_Performance_10K_HDD_1_2TB.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/HDD/Seagate_IronWolf_Pro_8TB_ST8000NE001.json",
+      "error": "HTTP Error 429: Too many requests (f061ab2)"
+    },
+    {
+      "file": "Component/HDD/WD_Black_4TB_WD4005FZBX.json",
+      "error": "HTTP Error 429: Too many requests (f061ab2)"
+    },
+    {
+      "file": "Component/HDD/WD_Blue_1TB_WD10EZEX.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/HDD/WD_Gold_10TB_WD102KRYZ.json",
+      "error": "HTTP Error 429: Too many requests (f061ab2)"
+    },
+    {
+      "file": "Component/HDD/WD_Red_Pro_6TB_WD6003FFBX.json",
+      "error": "HTTP Error 429: Too many requests (f061ab2)"
+    },
+    {
+      "file": "Component/Motherboard/ASRock_B550M-ITX_ac.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/Motherboard/ASRock_B550M_Pro4.json",
+      "error": "HTTP Error 429: Too many requests (f061ab2)"
+    },
+    {
+      "file": "Component/Motherboard/ASRock_B650I_Lightning_WiFi.json",
+      "error": "HTTP Error 429: Too many requests (f061ab2)"
+    },
+    {
+      "file": "Component/Motherboard/ASRock_B760M_Steel_Legend_WiFi.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/Motherboard/ASRock_X570_Taichi.json",
+      "error": "HTTP Error 429: Too many requests (f061ab2)"
+    },
+    {
+      "file": "Component/Motherboard/ASRock_X670E_Steel_Legend.json",
+      "error": "HTTP Error 429: Too many requests (f061ab2)"
+    },
+    {
+      "file": "Component/Motherboard/ASUS_PRIME_B450M-A_II.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/Motherboard/ASUS_PRIME_B550-PLUS.json",
+      "error": "HTTP Error 429: Too many requests (f061ab2)"
+    },
+    {
+      "file": "Component/Motherboard/ASUS_PRIME_B760M-A_WIFI_D4.json",
+      "error": "HTTP Error 429: Too many requests (f061ab2)"
+    },
+    {
+      "file": "Component/Motherboard/ASUS_TUF_GAMING_B550M-PLUS.json",
+      "error": "HTTP Error 429: Too many requests (f061ab2)"
+    },
+    {
+      "file": "Component/Motherboard/Gigabyte_B550_AORUS_ELITE_V2.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/Motherboard/Gigabyte_B650I_AORUS_ULTRA.json",
+      "error": "HTTP Error 429: Too many requests (f061ab2)"
+    },
+    {
+      "file": "Component/Motherboard/Gigabyte_B760M_DS3H_DDR4.json",
+      "error": "HTTP Error 429: Too many requests (f061ab2)"
+    },
+    {
+      "file": "Component/Motherboard/Gigabyte_X670_AORUS_ELITE_AX.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/Motherboard/MSI_B550-A_PRO.json",
+      "error": "HTTP Error 429: Too many requests (f061ab2)"
+    },
+    {
+      "file": "Component/Motherboard/MSI_B550M_PRO-VDH_WIFI.json",
+      "error": "HTTP Error 429: Too many requests (f061ab2)"
+    },
+    {
+      "file": "Component/Motherboard/MSI_MAG_B550M_MORTAR.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/Motherboard/MSI_MAG_X570_TOMAHAWK_WIFI.json",
+      "error": "HTTP Error 429: Too many requests (f061ab2)"
+    },
+    {
+      "file": "Component/Motherboard/MSI_MPG_B760I_EDGE_WIFI.json",
+      "error": "HTTP Error 429: Too many requests (f061ab2)"
+    },
+    {
+      "file": "Component/Motherboard/MSI_PRO_B760M-A_WIFI_DDR4.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/Motherboard/MSI_PRO_Z790-A_WIFI.json",
+      "error": "HTTP Error 429: Too many requests (f061ab2)"
+    },
+    {
+      "file": "Component/NVMe/Corsair_MP700_PRO_2TB.json",
+      "error": "HTTP Error 429: Too many requests (f061ab2)"
+    },
+    {
+      "file": "Component/NVMe/Crucial_P3_1TB.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/NVMe/Crucial_P3_Plus_1TB.json",
+      "error": "HTTP Error 429: Too many requests (f061ab2)"
+    },
+    {
+      "file": "Component/NVMe/Crucial_P3_Plus_500GB.json",
+      "error": "HTTP Error 429: Too many requests (f061ab2)"
+    },
+    {
+      "file": "Component/NVMe/Crucial_T700_1TB.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/NVMe/Crucial_T700_2TB.json",
+      "error": "HTTP Error 429: Too many requests (f061ab2)"
+    },
+    {
+      "file": "Component/NVMe/Samsung_970_EVO_Plus_1TB.json",
+      "error": "HTTP Error 429: Too many requests (f061ab2)"
+    },
+    {
+      "file": "Component/NVMe/Samsung_970_EVO_Plus_500GB.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/NVMe/Samsung_980_PRO_1TB.json",
+      "error": "HTTP Error 429: Too many requests (f061ab2)"
+    },
+    {
+      "file": "Component/NVMe/Samsung_990_PRO_1TB.json",
+      "error": "HTTP Error 429: Too many requests (f061ab2)"
+    },
+    {
+      "file": "Component/NVMe/WD_Black_SN750_1TB.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/NVMe/WD_Black_SN850X_1TB.json",
+      "error": "HTTP Error 429: Too many requests (f061ab2)"
+    },
+    {
+      "file": "Component/NVMe/WD_Black_SN850X_2TB.json",
+      "error": "HTTP Error 429: Too many requests (f061ab2)"
+    },
+    {
+      "file": "Component/PSU/Cooler_Master_RS_600_ACAB_B1.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/PSU/Corsair_CX450.json",
+      "error": "HTTP Error 429: Too many requests (f061ab2)"
+    },
+    {
+      "file": "Component/PSU/Corsair_CX550M.json",
+      "error": "HTTP Error 429: Too many requests (f061ab2)"
+    },
+    {
+      "file": "Component/PSU/Corsair_RM1000x.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/PSU/Corsair_RM750e.json",
+      "error": "HTTP Error 429: Too many requests (f061ab2)"
+    },
+    {
+      "file": "Component/PSU/Corsair_RM850x.json",
+      "error": "HTTP Error 429: Too many requests (f061ab2)"
+    },
+    {
+      "file": "Component/PSU/Seasonic_FOCUS_GX-1000.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/PSU/Seasonic_FOCUS_GX-750.json",
+      "error": "HTTP Error 429: Too many requests (f061ab2)"
+    },
+    {
+      "file": "Component/PSU/Seasonic_FOCUS_GX-850.json",
+      "error": "HTTP Error 429: Too many requests (f061ab2)"
+    },
+    {
+      "file": "Component/PSU/Seasonic_S12III_500.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/PSU/be_quiet_Dark_Power_13_1000W.json",
+      "error": "HTTP Error 429: Too many requests (f061ab2)"
+    },
+    {
+      "file": "Component/PSU/be_quiet_Pure_Power_11_600W.json",
+      "error": "HTTP Error 429: Too many requests (f061ab2)"
+    },
+    {
+      "file": "Component/PSU/be_quiet_Straight_Power_11_750W_Platinum.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/PSU/be_quiet_Straight_Power_12_850W_Platinum.json",
+      "error": "HTTP Error 429: Too many requests (f061ab2)"
+    },
+    {
+      "file": "Component/PSU/be_quiet_System_Power_9_400W.json",
+      "error": "HTTP Error 429: Too many requests (f061ab2)"
+    },
+    {
+      "file": "Component/RAM/Corsair_Vengeance_LPX_16GB_2x8_DDR4-3200_CL16.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/RAM/Corsair_Vengeance_LPX_32GB_2x16_DDR4-3600_CL18.json",
+      "error": "HTTP Error 429: Too many requests (f061ab2)"
+    },
+    {
+      "file": "Component/RAM/Corsair_Vengeance_RGB_Pro_16GB_2x8_DDR4-3200_CL16.json",
+      "error": "HTTP Error 429: Too many requests (f061ab2)"
+    },
+    {
+      "file": "Component/RAM/Crucial_Ballistix_16GB_2x8_DDR4-3000_CL15.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/RAM/G_Skill_Ripjaws_V_16GB_2x8_DDR4-3200_CL16.json",
+      "error": "HTTP Error 429: Too many requests (f061ab2)"
+    },
+    {
+      "file": "Component/RAM/G_Skill_Trident_Z_Neo_32GB_2x16_DDR4-3600_CL16.json",
+      "error": "HTTP Error 429: Too many requests (f061ab2)"
+    },
+    {
+      "file": "Component/RAM/G_Skill_Trident_Z_RGB_16GB_2x8_DDR4-3600_CL16.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/RAM/Kingston_FURY_Beast_16GB_2x8_DDR4-3200_CL16.json",
+      "error": "HTTP Error 429: Too many requests (f061ab2)"
+    },
+    {
+      "file": "Component/RAM/Kingston_FURY_Beast_RGB_16GB_2x8_DDR4-3600_CL18.json",
+      "error": "HTTP Error 429: Too many requests (f061ab2)"
+    },
+    {
+      "file": "Component/SDD/Crucial_MX500_1TB.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/SDD/Crucial_MX500_250GB.json",
+      "error": "HTTP Error 429: Too many requests (f061ab2)"
+    },
+    {
+      "file": "Component/SDD/Crucial_MX500_500GB.json",
+      "error": "HTTP Error 429: Too many requests (f061ab2)"
+    },
+    {
+      "file": "Component/SDD/Kingston_A400_240GB.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/SDD/Kingston_A400_480GB.json",
+      "error": "HTTP Error 429: Too many requests (f061ab2)"
+    },
+    {
+      "file": "Component/SDD/Kingston_A400_960GB.json",
+      "error": "HTTP Error 429: Too many requests (f061ab2)"
+    },
+    {
+      "file": "Component/SDD/Samsung_870_EVO_1TB.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/SDD/Samsung_870_EVO_250GB.json",
+      "error": "HTTP Error 429: Too many requests (f061ab2)"
+    },
+    {
+      "file": "Component/SDD/Samsung_870_EVO_500GB.json",
+      "error": "HTTP Error 429: Too many requests (f061ab2)"
+    },
+    {
+      "file": "Component/SDD/Samsung_870_QVO_2TB.json",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "file": "Component/SDD/Samsung_870_QVO_4TB.json",
+      "error": "HTTP Error 429: Too many requests (f061ab2)"
+    }
+  ]
+}
