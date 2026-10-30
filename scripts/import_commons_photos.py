@@ -3,7 +3,7 @@
 Run: python3 scripts/import_commons_photos.py --limit 200
 Never substitutes a generic or different model; logs missing references.
 """
-import argparse, json, re, time, unicodedata, urllib.parse, urllib.request
+import argparse, json, re, time, unicodedata, urllib.parse, urllib.request, urllib.error
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 API="https://commons.wikimedia.org/w/api.php"
@@ -15,8 +15,13 @@ def norm(v):
 def request(params):
     url=API+"?"+urllib.parse.urlencode(params)
     req=urllib.request.Request(url,headers={"User-Agent":USER_AGENT,"Accept":"application/json"})
-    with urllib.request.urlopen(req,timeout=25) as response:
-        return json.load(response)
+    for attempt in range(3):
+        try:
+            with urllib.request.urlopen(req,timeout=25) as response:
+                return json.load(response)
+        except urllib.error.HTTPError as exc:
+            if exc.code != 429 or attempt==2:raise
+            time.sleep(8*(attempt+1))
 def get_file(url,limit_bytes=2500000):
     req=urllib.request.Request(url,headers={"User-Agent":USER_AGENT})
     with urllib.request.urlopen(req,timeout=35) as response:
@@ -42,12 +47,13 @@ def candidates(query):
         if not url:continue
         yield title,lic,url,info.get("descriptionurl",""),meta.get("Artist",{}).get("value","")
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument("--limit",type=int,default=200);args=ap.parse_args()
+    ap=argparse.ArgumentParser();ap.add_argument("--limit",type=int,default=45);args=ap.parse_args()
     report={"downloaded":[],"missing":[],"skipped":[],"errors":[]}
     paths=[]
     for directory in sorted((ROOT/"Component").iterdir()):
         if directory.is_dir():paths.extend(sorted(directory.glob("*.json")))
-    for p in paths[:args.limit]:
+    checked=0;limited=0
+    for p in paths:
         try:
             d=json.loads(p.read_text(encoding="utf8"))
             cat=d.get("category") or p.parent.name
@@ -59,6 +65,8 @@ def main():
             existing=[f for f in folder.iterdir() if f.is_file() and f.suffix.lower() in EXTENSIONS and (norm(p.stem) in norm(f.stem) or norm(brand+" "+model) in norm(f.stem))]
             if existing:
                 report["skipped"].append({"file":str(p.relative_to(ROOT)),"reason":"photo existing"});continue
+            if checked>=args.limit:break
+            checked+=1
             found=False
             for title,lic,url,page,artist in candidates(brand+" "+model):
                 suffix=Path(urllib.parse.urlparse(url).path).suffix.lower()
@@ -71,7 +79,13 @@ def main():
             if not found:report["missing"].append({"component":d.get("full_name"),"reason":"No exact-model licensed photo on Wikimedia Commons"})
         except Exception as ex:
             report["errors"].append({"file":str(p.relative_to(ROOT)),"error":str(ex)[:300]})
-        time.sleep(.12)
+            if "HTTP Error 429" in str(ex):
+                limited+=1
+                if limited>=2:
+                    report["errors"].append({"reason":"Search rate limited by Wikimedia; stop batch and resume later"})
+                    break
+        time.sleep(1.5)
+    report["remaining_unchecked"]=max(0,len(paths)-checked)
     (ROOT/"ASSET_IMPORT_REPORT.json").write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n",encoding="utf8")
     print({k:len(v) for k,v in report.items()})
 if __name__=="__main__":main()
