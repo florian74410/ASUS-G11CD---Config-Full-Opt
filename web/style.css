@@ -203,3 +203,12 @@ body.detail-open{overflow:hidden}
 @media(prefers-reduced-motion:reduce){.cipher-cursor,.neon-sign,#white-rabbit{animation:none!important}#white-rabbit{display:none!important}}
 
 .explanations{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:7px;margin:9px 0 13px}.explain-row{background:var(--card2);border:1px solid var(--line);border-radius:9px;padding:9px 10px}.explain-row strong{color:var(--accent);font-size:12px}.explain-row p{color:var(--muted);font-size:11px;margin:4px 0 0;line-height:1.5}.tech-subheading{margin:15px 0 7px;font-size:13px;color:var(--accent)}
+
+/* Keep utility controls anchored right regardless of cipher title length */
+.topbar{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:start;gap:12px}
+.topbar>div:first-child{min-width:0}
+.topbar .top-actions{justify-self:end;justify-content:flex-end;align-items:center;max-width:100%;flex-wrap:wrap}
+.cyber-title{max-width:100%;min-width:0;overflow-wrap:anywhere;word-break:break-word;max-height:85px;overflow:hidden}
+#cipher-title{display:inline}
+@media(min-width:880px){.topbar .top-actions{flex-wrap:nowrap}.topbar .top-actions #syncstatus{max-width:195px;white-space:normal}.topbar .top-actions .theme-picker{flex:0 0 auto}}
+@media(max-width:879px){.topbar{grid-template-columns:1fr}.topbar .top-actions{justify-self:stretch;justify-content:flex-end}}
