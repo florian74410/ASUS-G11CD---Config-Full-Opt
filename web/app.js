@@ -156,7 +156,34 @@ function openListing(d){
     document.documentElement.dataset.theme=theme;
     if(selector) selector.value=theme;
     try{localStorage.setItem("g11cd-theme",theme);}catch(e){}
+    if(typeof initMatrixRain==="function")initMatrixRain();
   }
   apply(document.documentElement.dataset.theme);
   if(selector)selector.addEventListener("change",()=>apply(selector.value));
 })();
+
+/* Lightweight Matrix code rain, isolated behind the UI. */
+function initMatrixRain(){
+ const host=document.getElementById("matrix-rain");if(!host)return;
+ host.replaceChildren();
+ if(document.documentElement.dataset.theme!=="matrix")return;
+ const reduced=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+ const count=Math.min(70,Math.max(14,Math.floor(window.innerWidth/34)));
+ const fragment=document.createDocumentFragment();
+ for(let i=0;i<count;i++){
+   const el=document.createElement("span");el.className="matrix-rain-column";
+   let bin="";const length=18+(i*7%25);
+   for(let j=0;j<length;j++)bin+=((i*17+j*13+j*j)%7<3?"1":"0")+"\\n";
+   el.textContent=bin;
+   el.style.left=(i+.5)/count*100+"%";
+   el.style.animationDuration=(10+(i*7%16))+"s";
+   el.style.animationDelay=(-((i*13)%23))+"s";
+   el.style.opacity=String(.22+((i*3)%6)/20);
+   if(reduced)el.style.animation="none";
+   fragment.appendChild(el);
+ }
+ host.appendChild(fragment);
+}
+let matrixResizeTimeout;
+window.addEventListener("resize",()=>{clearTimeout(matrixResizeTimeout);matrixResizeTimeout=setTimeout(initMatrixRain,200)});
+initMatrixRain();
