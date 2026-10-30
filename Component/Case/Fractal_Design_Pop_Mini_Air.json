@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.1",
+  "id": "Fractal_Design_Pop_Mini_Air",
+  "category": "Case",
+  "manufacturer": "Fractal Design",
+  "model": "Pop Mini Air",
+  "full_name": "Fractal Design Pop Mini Air",
+  "status": "candidate",
+  "label": "gaming",
+  "segment": "gaming",
+  "specifications": {
+    "supported_form_factors": [
+      "mATX"
+    ],
+    "case_form_factor": "mATX"
+  },
+  "performance": {
+    "benchmarks": [],
+    "gaming_fps": [],
+    "measurements": []
+  },
+  "pricing": {
+    "new_eur": null,
+    "used_eur": null,
+    "acquisition_eur": null,
+    "shipping_eur": null,
+    "new_samples": [],
+    "used_samples": [],
+    "new_sample_count": 0,
+    "used_sample_count": 0,
+    "price_status": "unverified"
+  },
+  "compatibility": {
+    "status": "unverified",
+    "notes": "À vérifier pour chaque projet"
+  },
+  "asset": "",
+  "sources": [],
+  "data_quality": {
+    "status": "partial",
+    "checked_at": "2026-10-30",
+    "missing": [
+      "Manufacturer specifications beyond preliminary attributes",
+      "Validated image license / file",
+      "10 comparable new price offers",
+      "20 comparable used price offers",
+      "Measured benchmarks"
+    ]
+  },
+  "notes": "Fiche catalogue initiale, compléter uniquement avec données vérifiées."
+}

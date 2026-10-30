@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.1",
+  "id": "Gigabyte_B650I_AORUS_ULTRA",
+  "category": "Motherboard",
+  "manufacturer": "Gigabyte",
+  "model": "B650I AORUS ULTRA",
+  "full_name": "Gigabyte B650I AORUS ULTRA",
+  "status": "candidate",
+  "label": "gaming_pro",
+  "segment": "gaming_pro",
+  "specifications": {
+    "form_factor": "Mini-ITX",
+    "socket": "AM5",
+    "chipset": "B650",
+    "memory_type": "DDR5",
+    "pcie_minimum_generation": 3,
+    "pcie_generation_exact": null
+  },
+  "performance": {
+    "benchmarks": [],
+    "gaming_fps": [],
+    "measurements": []
+  },
+  "pricing": {
+    "new_eur": null,
+    "used_eur": null,
+    "acquisition_eur": null,
+    "shipping_eur": null,
+    "new_samples": [],
+    "used_samples": [],
+    "new_sample_count": 0,
+    "used_sample_count": 0,
+    "price_status": "unverified"
+  },
+  "compatibility": {
+    "status": "unverified",
+    "notes": "À vérifier pour chaque projet"
+  },
+  "asset": "",
+  "sources": [],
+  "data_quality": {
+    "status": "partial",
+    "checked_at": "2026-10-30",
+    "missing": [
+      "Manufacturer specifications beyond preliminary attributes",
+      "Validated image license / file",
+      "10 comparable new price offers",
+      "20 comparable used price offers",
+      "Measured benchmarks"
+    ]
+  },
+  "notes": "Fiche catalogue initiale, compléter uniquement avec données vérifiées."
+}

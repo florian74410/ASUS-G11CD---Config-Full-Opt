@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.1",
+  "id": "HGST_Ultrastar_C10K900_900GB",
+  "category": "HDD",
+  "manufacturer": "HGST",
+  "model": "Ultrastar C10K900 900GB",
+  "full_name": "HGST Ultrastar C10K900 900GB",
+  "status": "candidate",
+  "label": "",
+  "segment": "",
+  "specifications": {
+    "capacity_gb": 900,
+    "rpm": 10000,
+    "form_factor_inches": "2.5",
+    "interface": "SAS (confirm variant)"
+  },
+  "performance": {
+    "benchmarks": [],
+    "gaming_fps": [],
+    "measurements": []
+  },
+  "pricing": {
+    "new_eur": null,
+    "used_eur": null,
+    "acquisition_eur": null,
+    "shipping_eur": null,
+    "new_samples": [],
+    "used_samples": [],
+    "new_sample_count": 0,
+    "used_sample_count": 0,
+    "price_status": "unverified"
+  },
+  "compatibility": {
+    "status": "unverified",
+    "notes": "À vérifier pour chaque projet"
+  },
+  "asset": "",
+  "sources": [],
+  "data_quality": {
+    "status": "partial",
+    "checked_at": "2026-10-30",
+    "missing": [
+      "Manufacturer specifications beyond preliminary attributes",
+      "Validated image license / file",
+      "10 comparable new price offers",
+      "20 comparable used price offers",
+      "Measured benchmarks"
+    ]
+  },
+  "notes": "Fiche catalogue initiale, compléter uniquement avec données vérifiées."
+}

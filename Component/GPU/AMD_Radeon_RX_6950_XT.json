@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.1",
+  "id": "AMD_Radeon_RX_6950_XT",
+  "category": "GPU",
+  "manufacturer": "AMD",
+  "model": "Radeon RX 6950 XT",
+  "full_name": "AMD Radeon RX 6950 XT",
+  "status": "candidate",
+  "label": "",
+  "segment": "",
+  "specifications": {
+    "vram_gb": 16,
+    "vram_type": "GDDR6",
+    "memory_bus_bits": 256
+  },
+  "performance": {
+    "benchmarks": [],
+    "gaming_fps": [],
+    "measurements": []
+  },
+  "pricing": {
+    "new_eur": null,
+    "used_eur": null,
+    "acquisition_eur": null,
+    "shipping_eur": null,
+    "new_samples": [],
+    "used_samples": [],
+    "new_sample_count": 0,
+    "used_sample_count": 0,
+    "price_status": "unverified"
+  },
+  "compatibility": {
+    "status": "unverified",
+    "notes": "À vérifier pour chaque projet"
+  },
+  "asset": "",
+  "sources": [],
+  "data_quality": {
+    "status": "partial",
+    "checked_at": "2026-10-30",
+    "missing": [
+      "Manufacturer specifications beyond preliminary attributes",
+      "Validated image license / file",
+      "10 comparable new price offers",
+      "20 comparable used price offers",
+      "Measured benchmarks"
+    ]
+  },
+  "notes": "Fiche catalogue initiale, compléter uniquement avec données vérifiées."
+}
