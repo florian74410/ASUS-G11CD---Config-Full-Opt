@@ -11,7 +11,17 @@
   "specifications": {
     "cores": 6,
     "threads": 12,
-    "socket": "AM4"
+    "socket": "AM4",
+    "architecture": "Zen (Summit Ridge, variante AE)",
+    "process_nm": 14,
+    "base_ghz": 3.2,
+    "boost_ghz": 3.6,
+    "cache_l3_mb": 16,
+    "tdp_w": 65,
+    "memory_type": "DDR4",
+    "memory_channels": 2,
+    "pcie_gen": 3,
+    "integrated_graphics": false
   },
   "performance": {
     "benchmarks": [],
@@ -34,7 +44,12 @@
     "notes": "À vérifier pour chaque projet"
   },
   "asset": "",
-  "sources": [],
+  "sources": [
+    {
+      "type": "manufacturer_official_press",
+      "url": "https://ir.amd.com/news-events/press-releases/detail/762/worldwide-release-of-amd-ryzen-5-desktop-processors-for-gamers-and-creators-marks-arrival-of-markets-highest-performance-6-core-processor"
+    }
+  ],
   "data_quality": {
     "status": "partial",
     "checked_at": "2026-10-30",
@@ -46,5 +61,27 @@
       "Measured benchmarks"
     ]
   },
-  "notes": "Fiche catalogue initiale, compléter uniquement avec données vérifiées."
+  "notes": "Fiche catalogue initiale, compléter uniquement avec données vérifiées.",
+  "technical_description": "Processeur AMD Ryzen 5 1600 pour PC de bureau, architecture Zen (Summit Ridge, variante AE 14 nm). 6 cœurs physiques et 12 threads grâce au SMT. Jeu d'instructions x86-64, AES pour accélérer les opérations cryptographiques, AVX2 et FMA3 pour les calculs vectoriels, virtualisation matérielle AMD-V. Fréquences 3,2 GHz de base et jusqu'à 3,6 GHz en boost ; cache L3 16 Mo, TDP 65 W. Plateforme AM4 avec mémoire DDR4 double canal et PCIe 3.0. Requiert une carte graphique dédiée. Ne pas confondre avec la variante AF 12 nm.",
+  "technologies": [
+    "x86-64 (64 bits)",
+    "SMT",
+    "AES",
+    "AVX2",
+    "FMA3",
+    "AMD-V (virtualisation)",
+    "AMD SenseMI",
+    "XFR"
+  ],
+  "market_observations": [
+    {
+      "date": "2026-10-26",
+      "condition": "used",
+      "statistic": "median asking price",
+      "value_eur": 30,
+      "sample_count": 53,
+      "source": "https://flipdeal.fr/prix/processeur/ryzen-5-1600",
+      "note": "Médiane agrégée, pas une moyenne de 20 offres auditées ; variantes AE/AF à différencier."
+    }
+  ]
 }
