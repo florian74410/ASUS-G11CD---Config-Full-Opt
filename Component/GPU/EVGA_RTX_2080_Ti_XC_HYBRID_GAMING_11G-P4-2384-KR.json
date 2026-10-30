@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0",
+  "id": "EVGA_RTX_2080_Ti_XC_HYBRID_GAMING_11G-P4-2384-KR",
+  "category": "GPU",
+  "manufacturer": "EVGA",
+  "model": "GeForce RTX 2080 Ti XC HYBRID GAMING",
+  "full_name": "EVGA GeForce RTX 2080 Ti XC HYBRID GAMING 11GB (11G-P4-2384-KR)",
+  "status": "candidate",
+  "identification": {
+    "confidence": "high_visual_match_model_sku_unconfirmed",
+    "part_number": "11G-P4-2384-KR",
+    "verification_required": "Vérifier étiquette arrière, référence exacte et présence radiateur/pompe/ventilateur 120 mm avant achat.",
+    "photo_supplied_by_user": true
+  },
+  "specifications": {
+    "chipset": "NVIDIA GeForce RTX 2080 Ti",
+    "gpu_codename": "TU102",
+    "architecture": "Turing",
+    "manufacturing_nm": 12,
+    "cuda_or_shader_cores": 4352,
+    "rt_cores": 68,
+    "tensor_cores": 544,
+    "tmu": 272,
+    "rop": 88,
+    "base_mhz": 1350,
+    "boost_mhz": 1635,
+    "vram_gb": 11,
+    "vram_mb": 11264,
+    "vram_type": "GDDR6",
+    "memory_bus_bits": 352,
+    "memory_effective_gbps": 14,
+    "bandwidth_gbs": 616,
+    "pcie_version": "3.0",
+    "pcie_lanes": 16,
+    "tgp_w": 250,
+    "length_mm": 265.63,
+    "height_mm": 113.65,
+    "thickness_slots": 2,
+    "power_connectors": [
+      "PCIe 8-pin",
+      "PCIe 8-pin"
+    ],
+    "video_outputs": [
+      "DisplayPort 1.4 x3",
+      "HDMI 2.0b x1",
+      "USB-C VirtualLink x1"
+    ],
+    "cooling": {
+      "type": "Hybrid AIO liquide GPU + ventilateur dédié VRM/mémoire",
+      "radiator_mm": 120,
+      "radiator_fan_count": 1,
+      "pump_integrated": true,
+      "closed_loop": true,
+      "additional_mount_required": true
+    },
+    "backplate": "metal",
+    "rgb": true,
+    "max_displays": 4,
+    "max_digital_resolution": "7680 x 4320",
+    "nvlink": "2-way",
+    "directx": "12",
+    "vulkan": true,
+    "opengl": "4.x",
+    "cuda_compute_capability": "7.5",
+    "recommended_system_psu_w": 650
+  },
+  "performance": {
+    "theoretical": {
+      "fp32_tflops_approx": 14.23,
+      "calculation": "4352 x 2 x 1.635 GHz / 1000 ; calcul théorique au boost annoncé, pas un benchmark réel"
+    },
+    "benchmarks": [],
+    "gaming_fps": [],
+    "measurements": []
+  },
+  "pricing": {
+    "new_eur": null,
+    "used_eur": null,
+    "acquisition_eur": null,
+    "shipping_eur": null,
+    "acquired": false,
+    "shop": "",
+    "url": "",
+    "checked_at": ""
+  },
+  "compatibility": {
+    "status": "unverified",
+    "notes": "ASUS G11CD: carte ≈265.6 mm (> objectif initial 250 mm). Radiateur AIO 120 mm + tuyaux nécessitent place de montage. Alimentation Cooler Master actuelle 600 W, inférieure à recommandation constructeur 650 W. Deux PCIe 8-pin nécessaires. Contrôler dimensions internes, condition de pompe et bruit avant intégration."
+  },
+  "asset": "Assets/GPU/EVGA_RTX_2080_Ti_XC_HYBRID_GAMING_11G-P4-2384-KR.jpg",
+  "sources": [
+    {
+      "type": "manufacturer_datasheet",
+      "url": "https://media.dustin.eu/media/d200001001289315/geforce-rtx-2080-ti-xc-hybrid-gaming-productdatasheetbrochure.pdf"
+    },
+    {
+      "type": "manufacturer_gpu_family",
+      "url": "https://www.nvidia.com/fr-fr/geforce/graphics-cards/compare/"
+    },
+    {
+      "type": "product_specs",
+      "url": "https://www.newegg.com/evga-11g-p4-2384-kr-geforce-rtx-2080-ti-11gb-graphics-card-hybrid-cooler/p/N82E16814487432"
+    }
+  ],
+  "notes": "Identification visuelle à très forte ressemblance avec EVGA XC HYBRID Gaming; SKU final non prouvé par la seule photo. Ne pas confondre avec EVGA FTW3 HYBRID, XC2 ou version air. Aucun prix volontairement saisi.",
+  "updated_at": "2026-10-30"
+}
