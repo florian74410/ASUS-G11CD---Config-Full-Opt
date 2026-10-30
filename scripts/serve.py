@@ -45,9 +45,16 @@ def collect():
                 if obj["id"] in seen: raise ValueError("identifiant dupliqué")
                 seen.add(obj["id"])
                 obj["_json"]=str(p.relative_to(ROOT))
-                photos=find_component_images(cat,p,obj)
-                obj["_photos"]=photos
-                obj["_photo"]=photos[0] if photos else None
+                local_photos=find_component_images(cat,p,obj)
+                linked=[]
+                for entry in obj.get("images",[]):
+                    if not isinstance(entry,dict):continue
+                    url=entry.get("url","")
+                    if isinstance(url,str) and url.startswith("https://"):
+                        linked.append({"url":url,"label":entry.get("label") or "Photo externe","view":entry.get("view") or "unknown","source":entry.get("source",""),"external":True})
+                photos=[{"url":url,"label":"Photo locale","external":False} for url in local_photos]+linked
+                obj["_photos"]=photos[:12]
+                obj["_photo"]=photos[0]["url"] if photos else None
                 entries.append(obj)
             except Exception as exc: errors.append(f"{p.relative_to(ROOT)} : {exc}")
     return entries,errors
