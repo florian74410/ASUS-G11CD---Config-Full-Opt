@@ -98,30 +98,56 @@ function bindGallery(){
  stage.addEventListener("wheel",e=>{if(e.ctrlKey){e.preventDefault();galleryAdjust(e.deltaY<0?1.12:1/1.12)}},{passive:false});
  galleryDisplay();
 }
-const technologyExplanations={
- "socket":"Le socket détermine la famille de processeurs physiquement compatible avec une carte mère.",
- "chipset":"Le chipset gère certaines fonctions d’entrée/sortie, les lignes PCIe et les possibilités d’extension de la plateforme.",
- "pcie_gen":"La génération PCI Express influe sur la bande passante maximale disponible par ligne ; elle n’indique pas à elle seule les performances réelles.",
- "pcie_minimum_generation":"Cette génération représente le niveau minimal prévu pour l’interface PCI Express.",
- "memory_type":"La génération de mémoire impose une compatibilité entre processeur, carte mère et modules.",
- "vram_gb":"La capacité de mémoire vidéo aide à stocker textures, buffers et ressources ; elle n’est pas une mesure directe des images par seconde.",
- "memory_bus_bits":"La largeur du bus participe au débit mémoire, avec la fréquence effective et la compression.",
- "cores":"Les cœurs physiques permettent d’exécuter plusieurs travaux de calcul en parallèle.",
- "threads":"Les threads logiques exposent les contextes d’exécution simultanés ; leur nombre ne correspond pas forcément à celui des cœurs physiques.",
- "boost_ghz":"La fréquence Boost est une pointe conditionnelle liée aux limites de température, de puissance et à la charge.",
- "tdp_w":"Le TDP décrit une enveloppe thermique de référence ; ce n’est pas toujours la consommation électrique maximale.",
- "sequential_read_mbs":"Le débit de lecture séquentielle concerne les gros transferts continus, sans garantir les performances en accès aléatoires.",
- "sequential_write_mbs":"Le débit d’écriture séquentielle dépend notamment du cache, du contrôleur et du remplissage.",
- "cas_latency_cycles":"Le CAS (CL) exprime une latence en cycles : pour comparer des kits DDR4, il faut aussi connaître leur fréquence."
+const techCatalogue={
+ "AES":{year:"2001",desc:"Norme de chiffrement symétrique."},
+ "AVX2":{year:"2013",desc:"Instructions de calcul vectoriel."},
+ "SMT":{year:null,desc:"Plusieurs threads par cœur physique."},
+ "AMD-V":{year:"2006",desc:"Virtualisation matérielle AMD."},
+ "x86-64":{year:"2003",desc:"Extension 64 bits de l’architecture x86."},
+ "FMA3":{year:"2012",desc:"Calcul vectoriel multiplications-additions."},
+ "PCIe 3.0":{year:"2010",desc:"Bus d’extension PCI Express 3.0."},
+ "PCIe 4.0":{year:"2017",desc:"Bus d’extension PCI Express 4.0."},
+ "DDR4":{year:"2012",desc:"Quatrième génération de SDRAM DDR."},
+ "DDR5":{year:"2020",desc:"Cinquième génération de SDRAM DDR."},
+ "CUDA":{year:"2007",desc:"Plateforme de calcul parallèle NVIDIA."},
+ "DLSS":{year:"2018",desc:"Reconstruction d’image par IA."},
+ "Ray tracing":{year:null,desc:"Simulation des trajets de lumière."},
+ "Tensor cores":{year:"2017",desc:"Accélérateurs de calcul matriciel."},
+ "DirectX 12 Ultimate":{year:"2020",desc:"Ensemble de fonctions graphiques DirectX."},
+ "Resizable BAR":{year:null,desc:"Accès CPU étendu à la mémoire GPU."}
+};
+const specExplanations={
+ cores:["Cœurs",null,"Unités physiques de calcul."],threads:["Threads",null,"Flux logiques d’exécution."],socket:["Socket",null,"Support électrique et mécanique du CPU."],
+ chipset:["Chipset",null,"Contrôleur des fonctions de la plateforme."],pcie_gen:["PCIe",null,"Génération du bus d’extension."],
+ pcie_minimum_generation:["PCIe minimum",null,"Version minimale de l’interface."],
+ memory_type:["Mémoire",null,"Génération de RAM compatible."],vram_gb:["VRAM",null,"Capacité de mémoire graphique."],
+ memory_bus_bits:["Bus mémoire",null,"Largeur du bus mémoire du GPU."],
+ boost_ghz:["Boost",null,"Fréquence maximale conditionnelle."],tdp_w:["TDP",null,"Enveloppe thermique de référence."],
+ sequential_read_mbs:["Lecture séquentielle",null,"Débit sur gros fichiers continus."],
+ sequential_write_mbs:["Écriture séquentielle",null,"Débit d’écriture sur gros fichiers."],
+ cas_latency_cycles:["CAS / CL",null,"Latence mémoire exprimée en cycles."]
 };
 function explainTech(d){
- const specs=d.specifications||{},list=[];
- for(const key of Object.keys(specs)){if(specs[key]!==null&&specs[key]!==undefined&&technologyExplanations[key])list.push('<div class="explain-row"><strong><span class="explain-icon" aria-hidden="true">'+specIcon(key)+'</span>'+esc(fieldName(key))+'</strong><p>'+esc(technologyExplanations[key])+'</p></div>');}
- if(Array.isArray(d.technologies))for(const t of d.technologies){
- const explanations={AES:"AES accélère certaines opérations de chiffrement matériel.",SMT:"SMT permet à un cœur physique de gérer plusieurs threads logiques.",AVX2:"AVX2 étend les instructions vectorielles utilisées par des applications compatibles.", "AMD-V":"AMD-V prend en charge la virtualisation matérielle sur les systèmes compatibles.","64 bits":"Une architecture 64 bits permet l'exécution de logiciels x86-64 et l'adressage mémoire associé."};
- const key=String(t).split(" ")[0];if(explanations[key])list.push('<div class="explain-row"><strong><span class="explain-icon" aria-hidden="true">'+(/AES|64 bits/i.test(t)?icons.security:icons.technology)+'</span>'+esc(t)+'</strong><p>'+esc(explanations[key])+'</p></div>');
+ const items=[],seen=new Set();
+ const add=(name,year,description,icon)=>{const id=String(name).toLowerCase();if(seen.has(id))return;seen.add(id);items.push('<div class="tech-compact-row"><span class="explain-icon" aria-hidden="true">'+icon+'</span><span class="tech-compact-body"><strong>'+esc(name)+'</strong><small>'+esc(year||"Date non documentée")+' · '+esc(description)+'</small></span></div>')};
+ for(const [key,v] of Object.entries(d.specifications||{})){
+   if(v===null||v===undefined||!specExplanations[key])continue;
+   let [name,year,description]=specExplanations[key];
+   if(key==="memory_type"||key==="pcie_gen"){
+      const designation=key==="pcie_gen"?"PCIe "+v+".0":String(v);
+      const info=techCatalogue[designation];if(info){name=designation;year=info.year;description=info.desc}
+   }
+   add(name,year,description,specIcon(key));
  }
- return list.length?'<div class="explanations">'+list.join("")+'</div>':'<p class="muted">Technologies détaillées à documenter pour cette référence.</p>';
+ for(const item of (d.technologies||[])){
+   const name=typeof item==="string"?item:item?.name;
+   if(!name)continue;
+   const info=techCatalogue[name]||techCatalogue[Object.keys(techCatalogue).find(key=>name.startsWith(key+" "))];
+   const year=typeof item==="object"?item.year||info?.year:info?.year;
+   const description=typeof item==="object"?item.short_description||info?.desc:info?.desc;
+   add(name,year,description||"Description à compléter.",icons.technology);
+ }
+ return items.length?'<details class="tech-disclosure"><summary><span>Technologies embarquées</span><span class="tech-count">'+items.length+' entrées</span></summary><div class="tech-compact-list">'+items.join("")+'</div></details>':'';
 }
 function openDetail(id){
  const d=state.items.find(x=>x.id===id);if(!d)return;previousFocus=document.activeElement;
@@ -140,7 +166,7 @@ function openDetail(id){
  '<section class="tech-panel"><h3><span class="section-symbol">'+icons.technology+'</span> Spécifications techniques</h3>'+techTiles(d.specifications)+'</section></div></div>'+
  '<div class="component-secondary"><section class="tech-panel"><h3>◉ Prix et acquisition</h3><div class="tech-prices">'+pricing+'</div></section>'+
  '<section class="tech-panel"><h3><span class="section-symbol">'+icons.performance+'</span> Performances</h3>'+(Object.values(d.performance||{}).some(v=>Array.isArray(v)?v.length:!!v)?techTiles(d.performance):'<p class="muted">Aucun benchmark mesuré pour cette référence.</p>')+'</section>'+
- '<section class="tech-panel"><h3><span class="section-symbol">'+icons.info+'</span> Description technique</h3><p class="technical-prose">'+esc(d.technical_description||d.description_technical||d.notes||"Description complète à documenter pour cette référence.")+'</p>'+(d.technologies?.length?'<div class="tech-pills">'+d.technologies.map(t=>'<span>'+esc(t)+'</span>').join('')+'</div>':'')+'<h4 class="tech-subheading">Technologies embarquées</h4>'+explainTech(d)+'<div class="source-links">'+sourceLinks+'</div><small class="spec-path">'+esc(d._json||"")+'</small></section></div>';
+ '<section class="tech-panel"><h3><span class="section-symbol">'+icons.info+'</span> Description technique</h3><p class="technical-prose">'+esc(d.technical_description||d.description_technical||d.notes||"Description complète à documenter pour cette référence.")+'</p>'+(d.technologies?.length?'<div class="tech-pills">'+d.technologies.map(t=>'<span>'+esc(t)+'</span>').join('')+'</div>':'')+explainTech(d)+'<div class="source-links">'+sourceLinks+'</div><small class="spec-path">'+esc(d._json||"")+'</small></section></div>';
  $("modal").classList.remove("hidden");document.body.classList.add("detail-open");bindGallery();$("closemodal").focus();
 }
 $("closemodal").onclick=$("closeback").onclick=()=>{ $("modal").classList.add("hidden");document.body.classList.remove("detail-open");previousFocus?.focus?.(); };
