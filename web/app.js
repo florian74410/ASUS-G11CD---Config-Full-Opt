@@ -23,9 +23,25 @@ if(state.categories.includes(state.page)){$("category").innerHTML='<div class="s
 document.querySelectorAll("#search").forEach(el=>el.oninput=e=>{state.filters.q=e.target.value;updateFiltered();});document.querySelectorAll("#statusfilter").forEach(el=>el.onchange=e=>{state.filters.status=e.target.value;updateFiltered();});document.querySelectorAll("#catfilter").forEach(el=>el.onchange=e=>{state.filters.category=e.target.value;updateFiltered();});
 document.querySelectorAll("[data-id]").forEach(el=>el.onclick=()=>openDetail(el.dataset.id));}
 function updateFiltered(){const container=document.querySelector("section:not(.hidden) #filteredcontent");if(!container)return;container.innerHTML=state.page==="inventory"?table(filtered(null)):cardgrid(filtered(state.page));container.querySelectorAll("[data-id]").forEach(el=>el.onclick=()=>openDetail(el.dataset.id));}
-function openDetail(id){const d=state.items.find(x=>x.id===id);if(!d)return;const p=price(d);const detail=(label,v)=>'<div class="detail"><small>'+label+'</small><strong>'+esc(readable(v))+'</strong></div>';
-$("modal-content").innerHTML='<div class="kicker">'+esc(d.category)+'</div><h2>'+esc(d.full_name)+'</h2><p>'+status(d)+'</p><div class="details">'+detail("Neuf",euros(p.new_eur))+detail("Occasion",euros(p.used_eur))+detail("Acquisition",euros(p.acquisition_eur))+detail("Livraison",euros(p.shipping_eur))+detail("Total payé",euros(cost(d)))+detail("Compatibilité",d.compatibility?.status)+detail("Référence JSON",d._json)+detail("Photo",d._photo||"Non renseignée")+'</div><h3>Caractéristiques</h3><pre>'+esc(JSON.stringify(d.specifications||{},null,2))+'</pre><h3>Performances et benchmarks</h3><pre>'+esc(JSON.stringify(d.performance||{},null,2))+'</pre><h3>Notes / sources</h3><p>'+esc(d.notes||"—")+'</p><pre>'+esc(JSON.stringify(d.sources||[],null,2))+'</pre>';
-$("modal").classList.remove("hidden");}
+const names={form_factor:"Format",socket:"Socket",chipset:"Chipset",memory_type:"Mémoire",vram_gb:"VRAM (Go)",vram_type:"Type de VRAM",memory_bus_bits:"Bus mémoire (bits)",cores:"Cœurs",threads:"Threads",pcie_minimum_generation:"PCIe minimum",pcie_gen:"Génération PCIe",capacity_gb:"Capacité (Go)",sequential_read_mbs:"Lecture (Mo/s)",sequential_write_mbs:"Écriture (Mo/s)",nominal_w:"Puissance (W)",certification:"Certification",modular:"Modularité",speed_mts:"Vitesse (MT/s)",cas_latency_cycles:"Latence CAS",rgb:"RGB",rpm:"Tours par minute",length_mm:"Longueur (mm)",height_mm:"Hauteur (mm)",tgp_w:"Consommation (W)"};
+const fieldName=k=>names[k]||k.replace(/_/g," ").replace(/^./,x=>x.toUpperCase());
+const fieldValue=v=>v===null||v===""||v===undefined?"Non renseigné":typeof v==="boolean"?(v?"Oui":"Non"):Array.isArray(v)?v.map(fieldValue).join(", "):typeof v==="object"?Object.entries(v).map(([k,x])=>fieldName(k)+": "+fieldValue(x)).join(" · "):String(v);
+const detailsGrid=(o)=>'<div class="spec-grid">'+Object.entries(o||{}).filter(([,v])=>v!==undefined&&v!==null&&v!=="").map(([k,v])=>'<div class="spec-field"><small>'+esc(fieldName(k))+'</small><strong>'+esc(fieldValue(v))+'</strong></div>').join("")+'</div>';
+function openDetail(id){
+ const d=state.items.find(x=>x.id===id);if(!d)return;
+ const p=price(d),photos=d._photos|| (d._photo?[d._photo]:[]);
+ const gallery=photos.length?'<div class="detail-gallery">'+photos.map((url,i)=>'<img loading="lazy" src="'+esc(url)+'" alt="'+esc(d.full_name)+' - vue '+(i+1)+'">').join("")+'</div>':'<div class="detail-photo-missing">▣ &nbsp; Photographie non disponible dans Assets/'+esc(d.category)+'</div>';
+ const prices={Neuf:euros(p.new_eur),Occasion:euros(p.used_eur),Acquisition:euros(p.acquisition_eur),Livraison:euros(p.shipping_eur),"Total payé":euros(cost(d))};
+ const perf=d.performance||{};let perfText=Object.values(perf).some(v=>Array.isArray(v)?v.length:!!v)?detailsGrid(perf):'<p class="muted">Aucune mesure de performance validée.</p>';
+ const sourceLinks=(d.sources||[]).map((x,i)=>{const url=typeof x==="string"?x:x.url;return /^https?:\\/\\//.test(url||"")?'<a href="'+esc(url)+'" rel="noopener noreferrer" target="_blank">Source '+(i+1)+' ↗</a>':""}).join(" ");
+ $("modal-content").innerHTML='<div class="kicker">'+esc(d.category)+' · '+esc(d.manufacturer||"")+'</div><h2>'+esc(d.full_name)+'</h2>'+status(d)+gallery+
+ '<h3 class="spec-title">Informations générales</h3>'+detailsGrid({Fabricant:d.manufacturer,Modèle:d.model,Référence:d.id,Statut:d.status,Compatibilité:d.compatibility?.status})+
+ '<h3 class="spec-title">Caractéristiques techniques</h3>'+detailsGrid(d.specifications)+
+ '<h3 class="spec-title">Prix</h3>'+detailsGrid(prices)+
+ '<h3 class="spec-title">Performances</h3>'+perfText+
+ '<h3 class="spec-title">Notes et sources</h3><p class="muted">'+esc(d.notes||"Aucune note")+'</p><div class="source-links">'+sourceLinks+'</div><p class="muted spec-path">'+esc(d._json||"")+'</p>';
+ $("modal").classList.remove("hidden");
+}
 $("closemodal").onclick=$("closeback").onclick=()=>$("modal").classList.add("hidden");
 document.addEventListener("keydown",e=>{if(e.key==="Escape")$("modal").classList.add("hidden")});
 async function load(){try{const r=await fetch("/api/components?time="+Date.now(),{cache:"no-store"});if(!r.ok)throw Error("HTTP "+r.status);const data=await r.json();state.items=data.components;state.categories=data.categories;state.errors=data.errors;nav();$("warnings").innerHTML=data.errors.length?'<div class="notice">'+data.errors.map(esc).join("<br>")+'</div>':"";$("syncstatus").textContent=state.items.length+" références · actualisé "+new Date().toLocaleTimeString("fr-FR");render();if(state.page==="marketplace")renderMarketplace();}catch(e){$("syncstatus").textContent="Erreur de lecture";$("warnings").innerHTML='<div class="notice">'+esc(e.message)+'</div>';}}
@@ -90,7 +106,7 @@ function openListing(d){
 
 /* Appearance V1: theme choice is stored locally and never sent to server. */
 (function(){
-  const themes=new Set(["native","dark","classic","hardware","matrix"]);
+  const themes=new Set(["native","dark","classic","hardware","matrix","cyberpunk"]);
   const selector=document.getElementById("theme-select");
   function apply(value){
     const theme=themes.has(value)?value:"classic";
