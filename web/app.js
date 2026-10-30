@@ -187,3 +187,47 @@ function initMatrixRain(){
 let matrixResizeTimeout;
 window.addEventListener("resize",()=>{clearTimeout(matrixResizeTimeout);matrixResizeTimeout=setTimeout(initMatrixRain,200)});
 initMatrixRain();
+
+/* Matrix / Cyberpunk themed atmospheric interactions. Local only, no network. */
+(function(){
+ const title=document.getElementById("cipher-title"),rabbit=document.getElementById("white-rabbit");
+ const original="Base de Données Composants";
+ const reduce=window.matchMedia("(prefers-reduced-motion: reduce)");
+ let step=0;
+ function renderCipher(){
+   if(!title)return;
+   if(reduce.matches||!["matrix","cyberpunk"].includes(document.documentElement.dataset.theme)){title.textContent=original;return;}
+   const mode=step%3;
+   const letters=Array.from(original);
+   const transformed=letters.map((ch,i)=>{
+     if(ch===" ")return " ";
+     const n=ch.codePointAt(0);
+     return mode===0?ch:mode===1?n.toString(16).toUpperCase().padStart(2,"0"):n.toString(2).padStart(8,"0");
+   }).join(mode===0?"":" ");
+   title.textContent="";
+   const chars=Array.from(transformed);let i=0;
+   function type(){
+     if(!title||document.documentElement.dataset.theme==="classic")return;
+     title.textContent=chars.slice(0,i).join("");
+     if(i++<chars.length)setTimeout(type,Math.max(12,Math.min(50,2400/chars.length)));
+   }
+   type();step++;
+ }
+ renderCipher();setInterval(renderCipher,11500);
+ // Occasional rabbit: small decorative silhouette, never captures pointer events.
+ if(rabbit){
+   rabbit.textContent="🐇";
+   let hop=0;
+   function visit(){
+     if(reduce.matches||document.documentElement.dataset.theme!=="matrix"){rabbit.classList.remove("rabbit-active");return;}
+     rabbit.style.left=(20+(hop*31)%65)+"%";
+     rabbit.style.top=(32+(hop*17)%50)+"%";
+     rabbit.classList.remove("rabbit-active");
+     void rabbit.offsetWidth;
+     rabbit.classList.add("rabbit-active");
+     hop++;
+     setTimeout(()=>rabbit.classList.remove("rabbit-active"),4300);
+   }
+   setInterval(visit,26000);
+ }
+})();
