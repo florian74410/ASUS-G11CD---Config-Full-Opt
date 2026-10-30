@@ -5,6 +5,7 @@ import mimetypes
 import os
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
+import configurator_store
 from urllib.parse import unquote, urlsplit
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -133,17 +134,24 @@ def save_listing(d,listing_id=None):
             temporary.unlink(missing_ok=True)
         return obj
 
+configurator_store.init()
+
 class Handler(BaseHTTPRequestHandler):
-    def send_json(self,status,obj):
+    def send_json(self,status,obj,extra_headers=None):
         body=json.dumps(obj,ensure_ascii=False).encode("utf-8")
         self.send_response(status)
         self.send_header("Content-Type","application/json; charset=utf-8")
+        for key,value in (extra_headers or {}).items():self.send_header(key,value)
         self.send_header("Cache-Control","no-store")
         self.send_header("X-Content-Type-Options","nosniff")
         self.send_header("Content-Length",str(len(body)))
         self.end_headers()
         self.wfile.write(body)
     def do_POST(self):
+        config_result=configurator_store.post(self)
+        if config_result is not None:
+            status,body,headers=config_result
+            return self.send_json(status,body,headers)
         path=urlsplit(self.path).path
         if path!="/api/listings" and not re.fullmatch(r"/api/listings/LST-[A-F0-9]{12}",path):
             return self.send_json(404,{"error":"Route inconnue"})
@@ -161,6 +169,10 @@ class Handler(BaseHTTPRequestHandler):
         except Exception:return self.send_json(500,{"error":"Erreur de sauvegarde"})
 
     def do_GET(self):
+        config_result=configurator_store.get(self)
+        if config_result is not None:
+            status,body,headers=config_result
+            return self.send_json(status,body,headers)
         path=unquote(urlsplit(self.path).path)
         if path=="/api/listings":
             entries,errors=listings()
