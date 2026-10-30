@@ -11,7 +11,20 @@
   "specifications": {
     "vram_gb": 12,
     "vram_type": "GDDR6",
-    "memory_bus_bits": 192
+    "memory_bus_bits": 192,
+    "architecture": "Ampere",
+    "cuda_cores": 3584,
+    "base_ghz": 1.32,
+    "boost_ghz": 1.78,
+    "graphics_power_w": 170,
+    "recommended_psu_w": 550,
+    "compute_capability": "8.6",
+    "max_displays": 4,
+    "max_digital_resolution": "7680x4320",
+    "directx": "12 Ultimate",
+    "hdmi": "2.1",
+    "displayport": "1.4a",
+    "temperature_limit_c": 93
   },
   "performance": {
     "benchmarks": [],
@@ -34,17 +47,31 @@
     "notes": "À vérifier pour chaque projet"
   },
   "asset": "",
-  "sources": [],
+  "sources": [
+    {
+      "type": "official_manufacturer_specifications",
+      "url": "https://www.nvidia.com/fr-fr/geforce/graphics-cards/30-series/rtx-3060-3060ti/"
+    }
+  ],
   "data_quality": {
-    "status": "partial",
+    "status": "manufacturer_specifications_verified",
     "checked_at": "2026-10-30",
     "missing": [
-      "Manufacturer specifications beyond preliminary attributes",
-      "Validated image license / file",
-      "10 comparable new price offers",
-      "20 comparable used price offers",
-      "Measured benchmarks"
+      "Exact photos / multiple angles",
+      "10 verified new offers",
+      "20 verified used offers",
+      "Independent performance benchmarks"
     ]
   },
-  "notes": "Fiche catalogue initiale, compléter uniquement avec données vérifiées."
+  "notes": "Fiche catalogue initiale, compléter uniquement avec données vérifiées.",
+  "technical_description": "La GeForce RTX 3060 12 Go est un GPU NVIDIA Ampere équipé de 3 584 cœurs CUDA et de mémoire GDDR6 sur un bus de 192 bits. Elle prend en charge le rendu 3D, DirectX 12 Ultimate, le ray tracing matériel et l’accélération d’applications compatibles CUDA. Les cœurs Tensor accélèrent certaines opérations d’IA et les fonctions DLSS compatibles. NVIDIA annonce une consommation graphique de référence de 170 W et recommande une alimentation système de 550 W. Les fréquences, dimensions, prises d’alimentation et sorties exactes diffèrent selon le fabricant de la carte : la fiche décrit la variante 12 Go, et non la RTX 3060 8 Go.",
+  "technologies": [
+    "CUDA",
+    "Ray tracing",
+    "Tensor cores",
+    "DLSS",
+    "DirectX 12 Ultimate",
+    "NVIDIA Broadcast",
+    "Resizable BAR"
+  ]
 }
