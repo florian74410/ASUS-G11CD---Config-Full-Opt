@@ -65,6 +65,31 @@ function bindGallery(){
  stage.addEventListener("wheel",e=>{if(e.ctrlKey){e.preventDefault();galleryAdjust(e.deltaY<0?1.12:1/1.12)}},{passive:false});
  galleryDisplay();
 }
+const technologyExplanations={
+ "socket":"Le socket détermine la famille de processeurs physiquement compatible avec une carte mère.",
+ "chipset":"Le chipset gère certaines fonctions d’entrée/sortie, les lignes PCIe et les possibilités d’extension de la plateforme.",
+ "pcie_gen":"La génération PCI Express influe sur la bande passante maximale disponible par ligne ; elle n’indique pas à elle seule les performances réelles.",
+ "pcie_minimum_generation":"Cette génération représente le niveau minimal prévu pour l’interface PCI Express.",
+ "memory_type":"La génération de mémoire impose une compatibilité entre processeur, carte mère et modules.",
+ "vram_gb":"La capacité de mémoire vidéo aide à stocker textures, buffers et ressources ; elle n’est pas une mesure directe des images par seconde.",
+ "memory_bus_bits":"La largeur du bus participe au débit mémoire, avec la fréquence effective et la compression.",
+ "cores":"Les cœurs physiques permettent d’exécuter plusieurs travaux de calcul en parallèle.",
+ "threads":"Les threads logiques exposent les contextes d’exécution simultanés ; leur nombre ne correspond pas forcément à celui des cœurs physiques.",
+ "boost_ghz":"La fréquence Boost est une pointe conditionnelle liée aux limites de température, de puissance et à la charge.",
+ "tdp_w":"Le TDP décrit une enveloppe thermique de référence ; ce n’est pas toujours la consommation électrique maximale.",
+ "sequential_read_mbs":"Le débit de lecture séquentielle concerne les gros transferts continus, sans garantir les performances en accès aléatoires.",
+ "sequential_write_mbs":"Le débit d’écriture séquentielle dépend notamment du cache, du contrôleur et du remplissage.",
+ "cas_latency_cycles":"Le CAS (CL) exprime une latence en cycles : pour comparer des kits DDR4, il faut aussi connaître leur fréquence."
+};
+function explainTech(d){
+ const specs=d.specifications||{},list=[];
+ for(const key of Object.keys(specs)){if(specs[key]!==null&&specs[key]!==undefined&&technologyExplanations[key])list.push('<div class="explain-row"><strong>'+esc(fieldName(key))+'</strong><p>'+esc(technologyExplanations[key])+'</p></div>');}
+ if(Array.isArray(d.technologies))for(const t of d.technologies){
+ const explanations={AES:"AES accélère certaines opérations de chiffrement matériel.",SMT:"SMT permet à un cœur physique de gérer plusieurs threads logiques.",AVX2:"AVX2 étend les instructions vectorielles utilisées par des applications compatibles.", "AMD-V":"AMD-V prend en charge la virtualisation matérielle sur les systèmes compatibles.","64 bits":"Une architecture 64 bits permet l'exécution de logiciels x86-64 et l'adressage mémoire associé."};
+ const key=String(t).split(" ")[0];if(explanations[key])list.push('<div class="explain-row"><strong>'+esc(t)+'</strong><p>'+esc(explanations[key])+'</p></div>');
+ }
+ return list.length?'<div class="explanations">'+list.join("")+'</div>':'<p class="muted">Technologies détaillées à documenter pour cette référence.</p>';
+}
 function openDetail(id){
  const d=state.items.find(x=>x.id===id);if(!d)return;previousFocus=document.activeElement;
  const p=price(d),raw=d._photos||(d._photo?[d._photo]:[]);
