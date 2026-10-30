@@ -7,3 +7,6 @@ __pycache__/
 # Unlicensed retailer photo previews are local-only
 /Assets/Brut/LocalPreview/
 /LOCAL_PHOTO_PREVIEW_REPORT.json
+
+# Photo collector generated report
+/PHOTO_COLLECTOR_REPORT.json
