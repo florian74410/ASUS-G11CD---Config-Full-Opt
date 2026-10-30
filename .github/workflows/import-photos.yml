@@ -1,0 +1,27 @@
+name: Import verified component photographs
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  photos:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Retrieve licensed exact-model photographs
+        run: python3 scripts/import_commons_photos.py --limit 200
+      - name: Commit downloaded pictures with licensing report
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add Assets ASSET_IMPORT_REPORT.json
+          if ! git diff --cached --quiet; then
+            git commit -m "assets: import validated Commons component photographs"
+            git push
+          fi
