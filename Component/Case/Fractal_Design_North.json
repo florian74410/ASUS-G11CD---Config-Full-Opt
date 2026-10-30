@@ -47,5 +47,15 @@
       "Measured benchmarks"
     ]
   },
-  "notes": "Fiche catalogue initiale, compléter uniquement avec données vérifiées."
+  "notes": "Fiche catalogue initiale, compléter uniquement avec données vérifiées.",
+  "images": [
+    {
+      "url": "https://product.hstatic.net/1000333506/product/76226_v____case_fractal_design_north_charcoal_black_tg_dark__1__bd970a59bc37472da0ade9f893548f08.jpg",
+      "view": "product",
+      "label": "Charcoal Black TG (variante)",
+      "source": "https://hotgear.vn/products/vo-case-fractal-design-north-charcoal-black-atx-mid-tower-mau-den",
+      "license": "external-only; rights not verified",
+      "variant_note": "Photo de variante précise, ne pas supposer représentative des autres finitions"
+    }
+  ]
 }
