@@ -212,3 +212,13 @@ body.detail-open{overflow:hidden}
 #cipher-title{display:inline}
 @media(min-width:880px){.topbar .top-actions{flex-wrap:nowrap}.topbar .top-actions #syncstatus{max-width:195px;white-space:normal}.topbar .top-actions .theme-picker{flex:0 0 auto}}
 @media(max-width:879px){.topbar{grid-template-columns:1fr}.topbar .top-actions{justify-self:stretch;justify-content:flex-end}}
+
+/* Hardware pictograms across Matrix / Cyberpunk */
+.tech-icon{font-family:system-ui,sans-serif;font-weight:800;font-size:19px;flex-shrink:0;border:1px solid color-mix(in srgb,var(--accent) 30%,transparent);box-shadow:inset 0 0 10px color-mix(in srgb,var(--accent) 12%,transparent)}
+.explain-row strong{display:flex;align-items:center;gap:8px}
+.explain-icon,.mini-icon,.section-symbol{display:inline-grid;place-items:center;color:var(--accent);font-size:17px;line-height:1}
+.explain-icon{width:26px;height:26px;border:1px solid var(--line);border-radius:7px;background:var(--photo-bg)}
+.mini-icon{margin-right:6px;font-size:13px}.section-symbol{margin-right:5px}
+:root[data-theme="matrix"] .tech-icon,:root[data-theme="matrix"] .explain-icon{text-shadow:0 0 9px #45ff8a60}
+:root[data-theme="cyberpunk"] .tech-icon,:root[data-theme="cyberpunk"] .explain-icon{text-shadow:0 0 9px #20ddeb80}
+@media(max-width:650px){.tech-icon{font-size:16px}.explain-icon{width:23px;height:23px}}
