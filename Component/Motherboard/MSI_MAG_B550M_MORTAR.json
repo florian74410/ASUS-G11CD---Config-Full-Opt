@@ -49,5 +49,15 @@
       "Measured benchmarks"
     ]
   },
-  "notes": "Fiche catalogue initiale, compléter uniquement avec données vérifiées."
+  "notes": "Fiche catalogue initiale, compléter uniquement avec données vérifiées.",
+  "images": [
+    {
+      "url": "https://images.kabum.com.br/produtos/fotos/368053/placa-mae-msi-mortar-amd-am4-matx-ddr4-mag-b550m-mortar_1666801050_gg.jpg",
+      "view": "product",
+      "label": "Vue avant",
+      "source": "https://www.kabum.com.br/produto/368053/placa-mae-msi-mortar-amd-am4-matx-ddr4-preto-mag-b550m-mortar",
+      "license": "external-only; rights not verified",
+      "variant_note": ""
+    }
+  ]
 }
