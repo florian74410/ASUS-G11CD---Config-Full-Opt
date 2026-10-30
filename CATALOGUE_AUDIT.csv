@@ -1,0 +1,187 @@
+category,id,name,status,specs,photos,description,benchmarks,sources,file
+CPU,AMD_Ryzen_5_1600,AMD Ryzen 5 1600,incomplete,ok,"1/3 min (1 local, 0 external)",ok,0 sourced,1,Component/CPU/AMD_Ryzen_5_1600.json
+CPU,AMD_Ryzen_5_2600,AMD Ryzen 5 2600,incomplete,"architecture, base_ghz, boost_ghz, tdp_w, memory_type, pcie_gen","1/3 min (1 local, 0 external)",missing,0 sourced,0,Component/CPU/AMD_Ryzen_5_2600.json
+CPU,AMD_Ryzen_5_3600,AMD Ryzen 5 3600,incomplete,"architecture, base_ghz, boost_ghz, tdp_w, memory_type, pcie_gen","1/3 min (1 local, 0 external)",missing,0 sourced,0,Component/CPU/AMD_Ryzen_5_3600.json
+CPU,AMD_Ryzen_5_5600,AMD Ryzen 5 5600,incomplete,"architecture, base_ghz, boost_ghz, tdp_w, memory_type, pcie_gen","1/3 min (1 local, 0 external)",missing,0 sourced,0,Component/CPU/AMD_Ryzen_5_5600.json
+CPU,AMD_Ryzen_5_5600X,AMD Ryzen 5 5600X,incomplete,ok,"1/3 min (1 local, 0 external)",ok,0 sourced,1,Component/CPU/AMD_Ryzen_5_5600X.json
+CPU,AMD_Ryzen_5_7600,AMD Ryzen 5 7600,incomplete,"architecture, base_ghz, boost_ghz, tdp_w, memory_type, pcie_gen","1/3 min (1 local, 0 external)",missing,0 sourced,0,Component/CPU/AMD_Ryzen_5_7600.json
+CPU,AMD_Ryzen_5_7600X,AMD Ryzen 5 7600X,incomplete,"architecture, base_ghz, boost_ghz, tdp_w, memory_type, pcie_gen","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/CPU/AMD_Ryzen_5_7600X.json
+CPU,AMD_Ryzen_7_1700X,AMD Ryzen 7 1700X,incomplete,"memory_type, pcie_gen","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/CPU/AMD_Ryzen_7_1700X.json
+CPU,AMD_Ryzen_7_2700X,AMD Ryzen 7 2700X,incomplete,"architecture, base_ghz, boost_ghz, tdp_w, memory_type, pcie_gen","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/CPU/AMD_Ryzen_7_2700X.json
+CPU,AMD_Ryzen_7_3700X,AMD Ryzen 7 3700X,incomplete,"architecture, base_ghz, boost_ghz, tdp_w, memory_type, pcie_gen","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/CPU/AMD_Ryzen_7_3700X.json
+CPU,AMD_Ryzen_7_5700X,AMD Ryzen 7 5700X,incomplete,"architecture, base_ghz, boost_ghz, tdp_w, memory_type, pcie_gen","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/CPU/AMD_Ryzen_7_5700X.json
+CPU,AMD_Ryzen_7_5700X3D,AMD Ryzen 7 5700X3D,incomplete,"architecture, base_ghz, boost_ghz, tdp_w, memory_type, pcie_gen","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/CPU/AMD_Ryzen_7_5700X3D.json
+CPU,AMD_Ryzen_7_5800X3D,AMD Ryzen 7 5800X3D,incomplete,"architecture, base_ghz, boost_ghz, tdp_w, memory_type, pcie_gen","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/CPU/AMD_Ryzen_7_5800X3D.json
+CPU,AMD_Ryzen_7_7700X,AMD Ryzen 7 7700X,incomplete,"architecture, base_ghz, boost_ghz, tdp_w, memory_type, pcie_gen","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/CPU/AMD_Ryzen_7_7700X.json
+CPU,AMD_Ryzen_7_7800X3D,AMD Ryzen 7 7800X3D,incomplete,"architecture, base_ghz, boost_ghz, tdp_w, memory_type, pcie_gen","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/CPU/AMD_Ryzen_7_7800X3D.json
+CPU,AMD_Ryzen_7_9800X3D,AMD Ryzen 7 9800X3D,incomplete,"architecture, base_ghz, boost_ghz, tdp_w, memory_type, pcie_gen","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/CPU/AMD_Ryzen_7_9800X3D.json
+CPU,AMD_Ryzen_9_5900X,AMD Ryzen 9 5900X,incomplete,"architecture, base_ghz, boost_ghz, tdp_w, memory_type, pcie_gen","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/CPU/AMD_Ryzen_9_5900X.json
+CPU,AMD_Ryzen_9_5950X,AMD Ryzen 9 5950X,incomplete,"architecture, base_ghz, boost_ghz, tdp_w, memory_type, pcie_gen","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/CPU/AMD_Ryzen_9_5950X.json
+CPU,AMD_Ryzen_9_7950X,AMD Ryzen 9 7950X,incomplete,"architecture, base_ghz, boost_ghz, tdp_w, memory_type, pcie_gen","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/CPU/AMD_Ryzen_9_7950X.json
+CPU,Intel_Core_i5-10400,Intel Core i5-10400,incomplete,"architecture, base_ghz, boost_ghz, tdp_w, memory_type, pcie_gen","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/CPU/Intel_Core_i5-10400.json
+CPU,Intel_Core_i5-11400,Intel Core i5-11400,incomplete,"architecture, base_ghz, boost_ghz, tdp_w, memory_type, pcie_gen","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/CPU/Intel_Core_i5-11400.json
+CPU,Intel_Core_i5-12400F,Intel Core i5-12400F,incomplete,"architecture, base_ghz, boost_ghz, tdp_w, memory_type, pcie_gen","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/CPU/Intel_Core_i5-12400F.json
+CPU,Intel_Core_i5-13400F,Intel Core i5-13400F,incomplete,"architecture, base_ghz, boost_ghz, tdp_w, memory_type, pcie_gen","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/CPU/Intel_Core_i5-13400F.json
+CPU,Intel_Core_i5-13600K,Intel Core i5-13600K,incomplete,"architecture, base_ghz, boost_ghz, tdp_w, memory_type, pcie_gen","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/CPU/Intel_Core_i5-13600K.json
+CPU,Intel_Core_i5-14600K,Intel Core i5-14600K,incomplete,"architecture, base_ghz, boost_ghz, tdp_w, memory_type, pcie_gen","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/CPU/Intel_Core_i5-14600K.json
+CPU,Intel_Core_i7-10700K,Intel Core i7-10700K,incomplete,"architecture, base_ghz, boost_ghz, tdp_w, memory_type, pcie_gen","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/CPU/Intel_Core_i7-10700K.json
+CPU,Intel_Core_i7-12700K,Intel Core i7-12700K,incomplete,"architecture, base_ghz, boost_ghz, tdp_w, memory_type, pcie_gen","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/CPU/Intel_Core_i7-12700K.json
+CPU,Intel_Core_i7-13700K,Intel Core i7-13700K,incomplete,"architecture, base_ghz, boost_ghz, tdp_w, memory_type, pcie_gen","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/CPU/Intel_Core_i7-13700K.json
+CPU,Intel_Core_i7-14700K,Intel Core i7-14700K,incomplete,"architecture, base_ghz, boost_ghz, tdp_w, memory_type, pcie_gen","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/CPU/Intel_Core_i7-14700K.json
+CPU,Intel_Core_i7-4770,Intel Core i7-4770,incomplete,"architecture, base_ghz, boost_ghz, tdp_w, memory_type, pcie_gen","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/CPU/Intel_Core_i7-4770.json
+CPU,Intel_Core_i7-6700,Intel Core i7-6700,incomplete,"architecture, base_ghz, boost_ghz, tdp_w, memory_type, pcie_gen","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/CPU/Intel_Core_i7-6700.json
+CPU,Intel_Core_i7-7700,Intel Core i7-7700,incomplete,"architecture, base_ghz, boost_ghz, tdp_w, memory_type, pcie_gen","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/CPU/Intel_Core_i7-7700.json
+CPU,Intel_Core_i7-8700,Intel Core i7-8700,incomplete,"architecture, base_ghz, boost_ghz, tdp_w, memory_type, pcie_gen","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/CPU/Intel_Core_i7-8700.json
+CPU,Intel_Core_i7-9700K,Intel Core i7-9700K,incomplete,"architecture, base_ghz, boost_ghz, tdp_w, memory_type, pcie_gen","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/CPU/Intel_Core_i7-9700K.json
+Case,ASUS_G11CD_FR022T,ASUS G11CD-FR022T — boîtier noir/rouge,incomplete,"case_form_factor, supported_form_factors","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/Case/ASUS_G11CD_FR022T.json
+Case,ASUS_Prime_AP201,ASUS Prime AP201,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/Case/ASUS_Prime_AP201.json
+Case,Cooler_Master_Elite_110,Cooler Master Elite 110,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/Case/Cooler_Master_Elite_110.json
+Case,Cooler_Master_MasterBox_Q300L,Cooler Master MasterBox Q300L,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/Case/Cooler_Master_MasterBox_Q300L.json
+Case,Cooler_Master_NR200,Cooler Master NR200,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/Case/Cooler_Master_NR200.json
+Case,Corsair_4000D_Airflow,Corsair 4000D Airflow,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/Case/Corsair_4000D_Airflow.json
+Case,Fractal_Design_North,Fractal Design North,incomplete,ok,"1/3 min (0 local, 1 external)",missing,0 sourced,0,Component/Case/Fractal_Design_North.json
+Case,Fractal_Design_Pop_Mini_Air,Fractal Design Pop Mini Air,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/Case/Fractal_Design_Pop_Mini_Air.json
+Case,Fractal_Design_Ridge,Fractal Design Ridge,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/Case/Fractal_Design_Ridge.json
+Case,Fractal_Design_Terra,Fractal Design Terra,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/Case/Fractal_Design_Terra.json
+Case,Jonsbo_D31_Mesh,Jonsbo D31 Mesh,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/Case/Jonsbo_D31_Mesh.json
+Case,Lian_Li_A3-mATX,Lian Li A3-mATX,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/Case/Lian_Li_A3-mATX.json
+Case,Lian_Li_A4-H2O,Lian Li A4-H2O,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/Case/Lian_Li_A4-H2O.json
+Case,Lian_Li_O11_Dynamic_EVO,Lian Li O11 Dynamic EVO,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/Case/Lian_Li_O11_Dynamic_EVO.json
+Case,NZXT_H5_Flow,NZXT H5 Flow,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/Case/NZXT_H5_Flow.json
+Case,Phanteks_Eclipse_G360A,Phanteks Eclipse G360A,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/Case/Phanteks_Eclipse_G360A.json
+Case,SilverStone_SG13,SilverStone SG13,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/Case/SilverStone_SG13.json
+Case,Thermaltake_Core_V21,Thermaltake Core V21,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/Case/Thermaltake_Core_V21.json
+Case,be_quiet_Pure_Base_500,be quiet! Pure Base 500,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/Case/be_quiet_Pure_Base_500.json
+GPU,AMD_Radeon_RX_5700,AMD Radeon RX 5700,incomplete,"architecture, tgp_w","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/GPU/AMD_Radeon_RX_5700.json
+GPU,AMD_Radeon_RX_5700_XT,AMD Radeon RX 5700 XT,incomplete,"architecture, tgp_w","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/GPU/AMD_Radeon_RX_5700_XT.json
+GPU,AMD_Radeon_RX_580,AMD Radeon RX 580,incomplete,"architecture, tgp_w","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/GPU/AMD_Radeon_RX_580.json
+GPU,AMD_Radeon_RX_6600,AMD Radeon RX 6600,incomplete,"architecture, tgp_w","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/GPU/AMD_Radeon_RX_6600.json
+GPU,AMD_Radeon_RX_6600_XT,AMD Radeon RX 6600 XT,incomplete,"architecture, tgp_w","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/GPU/AMD_Radeon_RX_6600_XT.json
+GPU,AMD_Radeon_RX_6650_XT,AMD Radeon RX 6650 XT,incomplete,"architecture, tgp_w","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/GPU/AMD_Radeon_RX_6650_XT.json
+GPU,AMD_Radeon_RX_6700,AMD Radeon RX 6700,incomplete,"architecture, tgp_w","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/GPU/AMD_Radeon_RX_6700.json
+GPU,AMD_Radeon_RX_6700_XT,AMD Radeon RX 6700 XT,incomplete,"architecture, tgp_w","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/GPU/AMD_Radeon_RX_6700_XT.json
+GPU,AMD_Radeon_RX_6750_XT,AMD Radeon RX 6750 XT,incomplete,"architecture, tgp_w","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/GPU/AMD_Radeon_RX_6750_XT.json
+GPU,AMD_Radeon_RX_6800,AMD Radeon RX 6800,incomplete,"architecture, tgp_w","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/GPU/AMD_Radeon_RX_6800.json
+GPU,AMD_Radeon_RX_6800_XT,AMD Radeon RX 6800 XT,incomplete,"architecture, tgp_w","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/GPU/AMD_Radeon_RX_6800_XT.json
+GPU,AMD_Radeon_RX_6900_XT,AMD Radeon RX 6900 XT,incomplete,"architecture, tgp_w","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/GPU/AMD_Radeon_RX_6900_XT.json
+GPU,AMD_Radeon_RX_6950_XT,AMD Radeon RX 6950 XT,incomplete,"architecture, tgp_w","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/GPU/AMD_Radeon_RX_6950_XT.json
+GPU,AMD_Radeon_RX_7600,AMD Radeon RX 7600,incomplete,"architecture, tgp_w","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/GPU/AMD_Radeon_RX_7600.json
+GPU,AMD_Radeon_RX_7600_XT,AMD Radeon RX 7600 XT,incomplete,"architecture, tgp_w","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/GPU/AMD_Radeon_RX_7600_XT.json
+GPU,AMD_Radeon_RX_7700_XT,AMD Radeon RX 7700 XT,incomplete,"architecture, tgp_w","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/GPU/AMD_Radeon_RX_7700_XT.json
+GPU,AMD_Radeon_RX_7800_XT,AMD Radeon RX 7800 XT,incomplete,"architecture, tgp_w","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/GPU/AMD_Radeon_RX_7800_XT.json
+GPU,AMD_Radeon_RX_7900_GRE,AMD Radeon RX 7900 GRE,incomplete,"architecture, tgp_w","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/GPU/AMD_Radeon_RX_7900_GRE.json
+GPU,AMD_Radeon_RX_7900_XT,AMD Radeon RX 7900 XT,incomplete,"architecture, tgp_w","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/GPU/AMD_Radeon_RX_7900_XT.json
+GPU,AMD_Radeon_RX_7900_XTX,AMD Radeon RX 7900 XTX,incomplete,"architecture, tgp_w","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/GPU/AMD_Radeon_RX_7900_XTX.json
+GPU,AMD_Radeon_RX_9060_XT_16GB,AMD Radeon RX 9060 XT 16GB,incomplete,"architecture, tgp_w","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/GPU/AMD_Radeon_RX_9060_XT_16GB.json
+GPU,AMD_Radeon_RX_9070,AMD Radeon RX 9070,incomplete,"architecture, tgp_w","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/GPU/AMD_Radeon_RX_9070.json
+GPU,AMD_Radeon_RX_9070_XT,AMD Radeon RX 9070 XT,incomplete,"architecture, tgp_w","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/GPU/AMD_Radeon_RX_9070_XT.json
+GPU,EVGA_RTX_2080_Ti_XC_HYBRID_GAMING_11G-P4-2384-KR,EVGA GeForce RTX 2080 Ti XC HYBRID GAMING 11GB (11G-P4-2384-KR),incomplete,ok,"1/3 min (0 local, 1 external)",missing,0 sourced,4,Component/GPU/EVGA_RTX_2080_Ti_XC_HYBRID_GAMING_11G-P4-2384-KR.json
+GPU,NVIDIA_GeForce_RTX_2060_SUPER,NVIDIA GeForce RTX 2060 SUPER,incomplete,"architecture, tgp_w","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/GPU/NVIDIA_GeForce_RTX_2060_SUPER.json
+GPU,NVIDIA_GeForce_RTX_2070,NVIDIA GeForce RTX 2070,incomplete,"architecture, tgp_w","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/GPU/NVIDIA_GeForce_RTX_2070.json
+GPU,NVIDIA_GeForce_RTX_2070_SUPER,NVIDIA GeForce RTX 2070 SUPER,incomplete,"architecture, tgp_w","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/GPU/NVIDIA_GeForce_RTX_2070_SUPER.json
+GPU,NVIDIA_GeForce_RTX_2080,NVIDIA GeForce RTX 2080,incomplete,"architecture, tgp_w","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/GPU/NVIDIA_GeForce_RTX_2080.json
+GPU,NVIDIA_GeForce_RTX_2080_SUPER,NVIDIA GeForce RTX 2080 SUPER,incomplete,"architecture, tgp_w","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/GPU/NVIDIA_GeForce_RTX_2080_SUPER.json
+GPU,NVIDIA_GeForce_RTX_2080_Ti,NVIDIA GeForce RTX 2080 Ti,incomplete,"architecture, tgp_w","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/GPU/NVIDIA_GeForce_RTX_2080_Ti.json
+GPU,NVIDIA_GeForce_RTX_3060,NVIDIA GeForce RTX 3060,incomplete,tgp_w,"0/3 min (0 local, 0 external)",ok,0 sourced,1,Component/GPU/NVIDIA_GeForce_RTX_3060.json
+GPU,NVIDIA_GeForce_RTX_3060_Ti,NVIDIA GeForce RTX 3060 Ti,incomplete,"architecture, tgp_w","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/GPU/NVIDIA_GeForce_RTX_3060_Ti.json
+GPU,NVIDIA_GeForce_RTX_3070,NVIDIA GeForce RTX 3070,incomplete,"architecture, tgp_w","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/GPU/NVIDIA_GeForce_RTX_3070.json
+GPU,NVIDIA_GeForce_RTX_3070_Ti,NVIDIA GeForce RTX 3070 Ti,incomplete,"architecture, tgp_w","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/GPU/NVIDIA_GeForce_RTX_3070_Ti.json
+GPU,NVIDIA_GeForce_RTX_3080,NVIDIA GeForce RTX 3080,incomplete,"architecture, tgp_w","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/GPU/NVIDIA_GeForce_RTX_3080.json
+GPU,NVIDIA_GeForce_RTX_3080_Ti,NVIDIA GeForce RTX 3080 Ti,incomplete,"architecture, tgp_w","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/GPU/NVIDIA_GeForce_RTX_3080_Ti.json
+GPU,NVIDIA_GeForce_RTX_3090,NVIDIA GeForce RTX 3090,incomplete,"architecture, tgp_w","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/GPU/NVIDIA_GeForce_RTX_3090.json
+GPU,NVIDIA_GeForce_RTX_3090_Ti,NVIDIA GeForce RTX 3090 Ti,incomplete,"architecture, tgp_w","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/GPU/NVIDIA_GeForce_RTX_3090_Ti.json
+GPU,NVIDIA_GeForce_RTX_4060_Ti_16GB,NVIDIA GeForce RTX 4060 Ti 16GB,incomplete,"architecture, tgp_w","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/GPU/NVIDIA_GeForce_RTX_4060_Ti_16GB.json
+GPU,NVIDIA_GeForce_RTX_4070,NVIDIA GeForce RTX 4070,incomplete,"architecture, tgp_w","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/GPU/NVIDIA_GeForce_RTX_4070.json
+GPU,NVIDIA_GeForce_RTX_4070_SUPER,NVIDIA GeForce RTX 4070 SUPER,incomplete,"architecture, tgp_w","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/GPU/NVIDIA_GeForce_RTX_4070_SUPER.json
+GPU,NVIDIA_GeForce_RTX_4070_Ti,NVIDIA GeForce RTX 4070 Ti,incomplete,"architecture, tgp_w","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/GPU/NVIDIA_GeForce_RTX_4070_Ti.json
+GPU,NVIDIA_GeForce_RTX_4070_Ti_SUPER,NVIDIA GeForce RTX 4070 Ti SUPER,incomplete,"architecture, tgp_w","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/GPU/NVIDIA_GeForce_RTX_4070_Ti_SUPER.json
+GPU,NVIDIA_GeForce_RTX_4080,NVIDIA GeForce RTX 4080,incomplete,"architecture, tgp_w","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/GPU/NVIDIA_GeForce_RTX_4080.json
+GPU,NVIDIA_GeForce_RTX_4080_SUPER,NVIDIA GeForce RTX 4080 SUPER,incomplete,"architecture, tgp_w","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/GPU/NVIDIA_GeForce_RTX_4080_SUPER.json
+GPU,NVIDIA_GeForce_RTX_4090,NVIDIA GeForce RTX 4090,incomplete,"architecture, tgp_w","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/GPU/NVIDIA_GeForce_RTX_4090.json
+HDD,HGST_Ultrastar_C10K900_900GB,HGST Ultrastar C10K900 900GB,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/HDD/HGST_Ultrastar_C10K900_900GB.json
+HDD,Seagate_BarraCuda_2TB_ST2000DM008,Seagate BarraCuda 2TB ST2000DM008,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/HDD/Seagate_BarraCuda_2TB_ST2000DM008.json
+HDD,Seagate_Enterprise_Performance_10K_HDD_1_2TB,Seagate Enterprise Performance 10K HDD 1.2TB,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/HDD/Seagate_Enterprise_Performance_10K_HDD_1_2TB.json
+HDD,Seagate_IronWolf_Pro_8TB_ST8000NE001,Seagate IronWolf Pro 8TB ST8000NE001,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/HDD/Seagate_IronWolf_Pro_8TB_ST8000NE001.json
+HDD,WD_Black_4TB_WD4005FZBX,WD Black 4TB WD4005FZBX,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/HDD/WD_Black_4TB_WD4005FZBX.json
+HDD,WD_Blue_1TB_WD10EZEX,WD Blue 1TB WD10EZEX,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/HDD/WD_Blue_1TB_WD10EZEX.json
+HDD,WD_Gold_10TB_WD102KRYZ,WD Gold 10TB WD102KRYZ,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/HDD/WD_Gold_10TB_WD102KRYZ.json
+HDD,WD_Red_Pro_6TB_WD6003FFBX,WD Red Pro 6TB WD6003FFBX,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/HDD/WD_Red_Pro_6TB_WD6003FFBX.json
+Motherboard,ASRock_B550M-ITX_ac,ASRock B550M-ITX/ac,incomplete,pcie_generation_exact,"1/3 min (0 local, 1 external)",ok,0 sourced,1,Component/Motherboard/ASRock_B550M-ITX_ac.json
+Motherboard,ASRock_B550M_Pro4,ASRock B550M Pro4,incomplete,"pcie_generation_exact, memory_slots, m2_slots","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/Motherboard/ASRock_B550M_Pro4.json
+Motherboard,ASRock_B650I_Lightning_WiFi,ASRock B650I Lightning WiFi,incomplete,"pcie_generation_exact, memory_slots, m2_slots","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/Motherboard/ASRock_B650I_Lightning_WiFi.json
+Motherboard,ASRock_B760M_Steel_Legend_WiFi,ASRock B760M Steel Legend WiFi,incomplete,"pcie_generation_exact, memory_slots, m2_slots","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/Motherboard/ASRock_B760M_Steel_Legend_WiFi.json
+Motherboard,ASRock_X570_Taichi,ASRock X570 Taichi,incomplete,"pcie_generation_exact, memory_slots, m2_slots","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/Motherboard/ASRock_X570_Taichi.json
+Motherboard,ASRock_X670E_Steel_Legend,ASRock X670E Steel Legend,incomplete,"pcie_generation_exact, memory_slots, m2_slots","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/Motherboard/ASRock_X670E_Steel_Legend.json
+Motherboard,ASUS_PRIME_B450M-A_II,ASUS PRIME B450M-A II,incomplete,"pcie_generation_exact, memory_slots, m2_slots","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/Motherboard/ASUS_PRIME_B450M-A_II.json
+Motherboard,ASUS_PRIME_B550-PLUS,ASUS PRIME B550-PLUS,incomplete,"pcie_generation_exact, memory_slots, m2_slots","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/Motherboard/ASUS_PRIME_B550-PLUS.json
+Motherboard,ASUS_PRIME_B760M-A_WIFI_D4,ASUS PRIME B760M-A WIFI D4,incomplete,"pcie_generation_exact, memory_slots, m2_slots","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/Motherboard/ASUS_PRIME_B760M-A_WIFI_D4.json
+Motherboard,ASUS_ProArt_B550-CREATOR,ASUS ProArt B550-CREATOR,incomplete,"pcie_generation_exact, memory_slots, m2_slots","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/Motherboard/ASUS_ProArt_B550-CREATOR.json
+Motherboard,ASUS_ProArt_X670E-CREATOR_WIFI,ASUS ProArt X670E-CREATOR WIFI,incomplete,"pcie_generation_exact, memory_slots, m2_slots","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/Motherboard/ASUS_ProArt_X670E-CREATOR_WIFI.json
+Motherboard,ASUS_ROG_MAXIMUS_Z790_HERO,ASUS ROG MAXIMUS Z790 HERO,incomplete,"pcie_generation_exact, memory_slots, m2_slots","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/Motherboard/ASUS_ROG_MAXIMUS_Z790_HERO.json
+Motherboard,ASUS_ROG_STRIX_B550-I_GAMING,ASUS ROG STRIX B550-I GAMING,incomplete,"pcie_generation_exact, memory_slots, m2_slots","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/Motherboard/ASUS_ROG_STRIX_B550-I_GAMING.json
+Motherboard,ASUS_ROG_STRIX_B650E-I_GAMING_WIFI,ASUS ROG STRIX B650E-I GAMING WIFI,incomplete,"pcie_generation_exact, memory_slots, m2_slots","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/Motherboard/ASUS_ROG_STRIX_B650E-I_GAMING_WIFI.json
+Motherboard,ASUS_ROG_STRIX_Z790-I_GAMING_WIFI,ASUS ROG STRIX Z790-I GAMING WIFI,incomplete,"pcie_generation_exact, memory_slots, m2_slots","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/Motherboard/ASUS_ROG_STRIX_Z790-I_GAMING_WIFI.json
+Motherboard,ASUS_TUF_B450M_PLUS_GAMING,ASUS TUF B450M-PLUS GAMING,incomplete,"memory_type, pcie_generation_exact, memory_slots, m2_slots","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/Motherboard/ASUS_TUF_B450M_PLUS_GAMING.json
+Motherboard,ASUS_TUF_GAMING_B550M-PLUS,ASUS TUF GAMING B550M-PLUS,incomplete,"pcie_generation_exact, memory_slots, m2_slots","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/Motherboard/ASUS_TUF_GAMING_B550M-PLUS.json
+Motherboard,ASUS_TUF_GAMING_X570-PLUS_WI-FI,ASUS TUF GAMING X570-PLUS (WI-FI),incomplete,"pcie_generation_exact, memory_slots, m2_slots","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/Motherboard/ASUS_TUF_GAMING_X570-PLUS_WI-FI.json
+Motherboard,Gigabyte_B550I_AORUS_PRO_AX,Gigabyte B550I AORUS PRO AX,incomplete,"pcie_generation_exact, memory_slots, m2_slots","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/Motherboard/Gigabyte_B550I_AORUS_PRO_AX.json
+Motherboard,Gigabyte_B550M_DS3H,Gigabyte B550M DS3H,incomplete,"pcie_generation_exact, memory_slots, m2_slots","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/Motherboard/Gigabyte_B550M_DS3H.json
+Motherboard,Gigabyte_B550_AORUS_ELITE_V2,Gigabyte B550 AORUS ELITE V2,incomplete,"pcie_generation_exact, memory_slots, m2_slots","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/Motherboard/Gigabyte_B550_AORUS_ELITE_V2.json
+Motherboard,Gigabyte_B650I_AORUS_ULTRA,Gigabyte B650I AORUS ULTRA,incomplete,"pcie_generation_exact, memory_slots, m2_slots","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/Motherboard/Gigabyte_B650I_AORUS_ULTRA.json
+Motherboard,Gigabyte_B760M_DS3H_DDR4,Gigabyte B760M DS3H DDR4,incomplete,"pcie_generation_exact, memory_slots, m2_slots","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/Motherboard/Gigabyte_B760M_DS3H_DDR4.json
+Motherboard,Gigabyte_X670_AORUS_ELITE_AX,Gigabyte X670 AORUS ELITE AX,incomplete,"pcie_generation_exact, memory_slots, m2_slots","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/Motherboard/Gigabyte_X670_AORUS_ELITE_AX.json
+Motherboard,MSI_B550-A_PRO,MSI B550-A PRO,incomplete,"pcie_generation_exact, memory_slots, m2_slots","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/Motherboard/MSI_B550-A_PRO.json
+Motherboard,MSI_B550M_PRO-VDH_WIFI,MSI B550M PRO-VDH WIFI,incomplete,"pcie_generation_exact, memory_slots, m2_slots","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/Motherboard/MSI_B550M_PRO-VDH_WIFI.json
+Motherboard,MSI_MAG_B550M_MORTAR,MSI MAG B550M MORTAR,incomplete,"pcie_generation_exact, memory_slots, m2_slots","1/3 min (0 local, 1 external)",missing,0 sourced,0,Component/Motherboard/MSI_MAG_B550M_MORTAR.json
+Motherboard,MSI_MAG_X570_TOMAHAWK_WIFI,MSI MAG X570 TOMAHAWK WIFI,incomplete,"pcie_generation_exact, memory_slots, m2_slots","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/Motherboard/MSI_MAG_X570_TOMAHAWK_WIFI.json
+Motherboard,MSI_MPG_B760I_EDGE_WIFI,MSI MPG B760I EDGE WIFI,incomplete,"pcie_generation_exact, memory_slots, m2_slots","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/Motherboard/MSI_MPG_B760I_EDGE_WIFI.json
+Motherboard,MSI_PRO_B760M-A_WIFI_DDR4,MSI PRO B760M-A WIFI DDR4,incomplete,"pcie_generation_exact, memory_slots, m2_slots","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/Motherboard/MSI_PRO_B760M-A_WIFI_DDR4.json
+Motherboard,MSI_PRO_Z790-A_WIFI,MSI PRO Z790-A WIFI,incomplete,"pcie_generation_exact, memory_slots, m2_slots","0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/Motherboard/MSI_PRO_Z790-A_WIFI.json
+NVMe,Corsair_MP700_PRO_2TB,Corsair MP700 PRO 2TB,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/NVMe/Corsair_MP700_PRO_2TB.json
+NVMe,Crucial_P3_1TB,Crucial P3 1TB,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/NVMe/Crucial_P3_1TB.json
+NVMe,Crucial_P3_Plus_1TB,Crucial P3 Plus 1TB,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/NVMe/Crucial_P3_Plus_1TB.json
+NVMe,Crucial_P3_Plus_500GB,Crucial P3 Plus 500GB,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/NVMe/Crucial_P3_Plus_500GB.json
+NVMe,Crucial_T700_1TB,Crucial T700 1TB,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/NVMe/Crucial_T700_1TB.json
+NVMe,Crucial_T700_2TB,Crucial T700 2TB,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/NVMe/Crucial_T700_2TB.json
+NVMe,Samsung_970_EVO_Plus_1TB,Samsung 970 EVO Plus 1TB,incomplete,ok,"1/3 min (0 local, 1 external)",missing,0 sourced,0,Component/NVMe/Samsung_970_EVO_Plus_1TB.json
+NVMe,Samsung_970_EVO_Plus_500GB,Samsung 970 EVO Plus 500GB,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/NVMe/Samsung_970_EVO_Plus_500GB.json
+NVMe,Samsung_980_PRO_1TB,Samsung 980 PRO 1TB,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/NVMe/Samsung_980_PRO_1TB.json
+NVMe,Samsung_990_PRO_1TB,Samsung 990 PRO 1TB,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/NVMe/Samsung_990_PRO_1TB.json
+NVMe,WD_Black_SN750_1TB,WD Black SN750 1TB,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/NVMe/WD_Black_SN750_1TB.json
+NVMe,WD_Black_SN850X_1TB,WD Black SN850X 1TB,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/NVMe/WD_Black_SN850X_1TB.json
+NVMe,WD_Black_SN850X_2TB,WD Black SN850X 2TB,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/NVMe/WD_Black_SN850X_2TB.json
+PSU,Cooler_Master_RS_600_ACAB_B1,Cooler Master RS-600-ACAB-B1 600 W,incomplete,certification,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/PSU/Cooler_Master_RS_600_ACAB_B1.json
+PSU,Corsair_CX450,Corsair CX450,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/PSU/Corsair_CX450.json
+PSU,Corsair_CX550M,Corsair CX550M,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/PSU/Corsair_CX550M.json
+PSU,Corsair_RM1000x,Corsair RM1000x,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/PSU/Corsair_RM1000x.json
+PSU,Corsair_RM750e,Corsair RM750e,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/PSU/Corsair_RM750e.json
+PSU,Corsair_RM850x,Corsair RM850x,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/PSU/Corsair_RM850x.json
+PSU,Seasonic_FOCUS_GX-1000,Seasonic FOCUS GX-1000,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/PSU/Seasonic_FOCUS_GX-1000.json
+PSU,Seasonic_FOCUS_GX-750,Seasonic FOCUS GX-750,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/PSU/Seasonic_FOCUS_GX-750.json
+PSU,Seasonic_FOCUS_GX-850,Seasonic FOCUS GX-850,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/PSU/Seasonic_FOCUS_GX-850.json
+PSU,Seasonic_S12III_500,Seasonic S12III 500,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/PSU/Seasonic_S12III_500.json
+PSU,be_quiet_Dark_Power_13_1000W,be quiet! Dark Power 13 1000W,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/PSU/be_quiet_Dark_Power_13_1000W.json
+PSU,be_quiet_Pure_Power_11_600W,be quiet! Pure Power 11 600W,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/PSU/be_quiet_Pure_Power_11_600W.json
+PSU,be_quiet_Straight_Power_11_750W_Platinum,be quiet! Straight Power 11 750W Platinum,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/PSU/be_quiet_Straight_Power_11_750W_Platinum.json
+PSU,be_quiet_Straight_Power_12_850W_Platinum,be quiet! Straight Power 12 850W Platinum,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/PSU/be_quiet_Straight_Power_12_850W_Platinum.json
+PSU,be_quiet_System_Power_9_400W,be quiet! System Power 9 400W,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/PSU/be_quiet_System_Power_9_400W.json
+RAM,Corsair_Vengeance_LPX_16GB_2x8_DDR4-3200_CL16,Corsair Vengeance LPX 16GB 2x8 DDR4-3200 CL16,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/RAM/Corsair_Vengeance_LPX_16GB_2x8_DDR4-3200_CL16.json
+RAM,Corsair_Vengeance_LPX_32GB_2x16_DDR4-3600_CL18,Corsair Vengeance LPX 32GB 2x16 DDR4-3600 CL18,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/RAM/Corsair_Vengeance_LPX_32GB_2x16_DDR4-3600_CL18.json
+RAM,Corsair_Vengeance_RGB_Pro_16GB_2x8_DDR4-3200_CL16,Corsair Vengeance RGB Pro 16GB 2x8 DDR4-3200 CL16,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/RAM/Corsair_Vengeance_RGB_Pro_16GB_2x8_DDR4-3200_CL16.json
+RAM,Crucial_Ballistix_16GB_2x8_DDR4-3000_CL15,Crucial Ballistix 16GB 2x8 DDR4-3000 CL15,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/RAM/Crucial_Ballistix_16GB_2x8_DDR4-3000_CL15.json
+RAM,G_Skill_Ripjaws_V_16GB_2x8_DDR4-3200_CL16,G.Skill Ripjaws V 16GB 2x8 DDR4-3200 CL16,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/RAM/G_Skill_Ripjaws_V_16GB_2x8_DDR4-3200_CL16.json
+RAM,G_Skill_Trident_Z_Neo_32GB_2x16_DDR4-3600_CL16,G.Skill Trident Z Neo 32GB 2x16 DDR4-3600 CL16,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/RAM/G_Skill_Trident_Z_Neo_32GB_2x16_DDR4-3600_CL16.json
+RAM,G_Skill_Trident_Z_RGB_16GB_2x8_DDR4-3600_CL16,G.Skill Trident Z RGB 16GB 2x8 DDR4-3600 CL16,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/RAM/G_Skill_Trident_Z_RGB_16GB_2x8_DDR4-3600_CL16.json
+RAM,Kingston_FURY_Beast_16GB_2x8_DDR4-3200_CL16,Kingston FURY Beast 16GB 2x8 DDR4-3200 CL16,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/RAM/Kingston_FURY_Beast_16GB_2x8_DDR4-3200_CL16.json
+RAM,Kingston_FURY_Beast_RGB_16GB_2x8_DDR4-3600_CL18,Kingston FURY Beast RGB 16GB 2x8 DDR4-3600 CL18,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/RAM/Kingston_FURY_Beast_RGB_16GB_2x8_DDR4-3600_CL18.json
+SDD,Crucial_MX500_1TB,Crucial MX500 1TB,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/SDD/Crucial_MX500_1TB.json
+SDD,Crucial_MX500_250GB,Crucial MX500 250GB,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/SDD/Crucial_MX500_250GB.json
+SDD,Crucial_MX500_500GB,Crucial MX500 500GB,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/SDD/Crucial_MX500_500GB.json
+SDD,Kingston_A400_240GB,Kingston A400 240GB,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/SDD/Kingston_A400_240GB.json
+SDD,Kingston_A400_480GB,Kingston A400 480GB,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/SDD/Kingston_A400_480GB.json
+SDD,Kingston_A400_960GB,Kingston A400 960GB,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/SDD/Kingston_A400_960GB.json
+SDD,Samsung_870_EVO_1TB,Samsung 870 EVO 1TB,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/SDD/Samsung_870_EVO_1TB.json
+SDD,Samsung_870_EVO_250GB,Samsung 870 EVO 250GB,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/SDD/Samsung_870_EVO_250GB.json
+SDD,Samsung_870_EVO_500GB,Samsung 870 EVO 500GB,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/SDD/Samsung_870_EVO_500GB.json
+SDD,Samsung_870_QVO_2TB,Samsung 870 QVO 2TB,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/SDD/Samsung_870_QVO_2TB.json
+SDD,Samsung_870_QVO_4TB,Samsung 870 QVO 4TB,incomplete,ok,"0/3 min (0 local, 0 external)",missing,0 sourced,0,Component/SDD/Samsung_870_QVO_4TB.json
