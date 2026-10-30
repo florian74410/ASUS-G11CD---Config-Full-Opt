@@ -29,7 +29,7 @@ const fieldValue=v=>v===null||v===""||v===undefined?"Non renseigné":typeof v===
 const detailsGrid=(o)=>'<div class="spec-grid">'+Object.entries(o||{}).filter(([,v])=>v!==undefined&&v!==null&&v!=="").map(([k,v])=>'<div class="spec-field"><small>'+esc(fieldName(k))+'</small><strong>'+esc(fieldValue(v))+'</strong></div>').join("")+'</div>';
 
 let activeGallery=[],galleryIndex=0,galleryZoom=1,galleryMode="photos",previousFocus=null;
-const viewNames=["Avant","Arrière","Profil","Dessus","Connectique","Vue détaillée"];
+const viewNames=["Vue 1","Vue 2","Vue 3","Vue 4","Vue 5","Vue 6"];
 const techIcons={form_factor:"▤",socket:"◉",chipset:"▣",memory_type:"▥",vram_gb:"▦",cores:"◈",threads:"◈",capacity_gb:"▰",pcie_gen:"⌁",nominal_w:"ϟ",rpm:"◌",sequential_read_mbs:"↑",sequential_write_mbs:"↓"};
 const techTiles=data=>'<div class="tech-tiles">'+Object.entries(data||{}).filter(([,v])=>v!==null&&v!==undefined&&v!==""&&!(Array.isArray(v)&&!v.length)).map(([k,v])=>'<div class="tech-tile"><span class="tech-icon">'+(techIcons[k]||"⬡")+'</span><div><small>'+esc(fieldName(k))+'</small><strong>'+esc(fieldValue(v))+'</strong></div></div>').join("")+'</div>';
 function galleryViewLabel(i){return activeGallery[i]?.label||viewNames[i]||"Vue "+(i+1)}
