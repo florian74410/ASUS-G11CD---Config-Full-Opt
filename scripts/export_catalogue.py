@@ -40,7 +40,7 @@ def main():
             cap=s.get("socket") or s.get("capacity_gb") or s.get("vram_gb") or s.get("nominal_w") or ""
             fields={k:v for k,v in s.items() if v is not None}
             technical=" | ".join(f"{k}: {v}" for k,v in fields.items())
-            label=d.get("label") or (s.get("certification","")+" / "+s.get("modular","") if category=="PSU" else "")
+            label=d.get("label") or (str(s.get("certification") or "")+" / "+str(s.get("modular") or "") if category=="PSU" else "")
             new=pr.get("new_eur");used=pr.get("used_eur")
             # Leave price blank unless offer samples support average / explicit prior entry.
             nnew=pr.get("new_sample_count",0);nused=pr.get("used_sample_count",0)
