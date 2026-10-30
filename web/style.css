@@ -259,3 +259,6 @@ body.detail-open{overflow:hidden}
 .cfg-public-line>strong{min-width:0;overflow-wrap:anywhere}
 @media(max-width:1020px){.cfg-layout{grid-template-columns:minmax(0,1fr)}.cfg-summary{position:static}}
 @media(max-width:650px){.cfg-head{gap:6px}.cfg-part{padding:8px}.cfg-selected select{width:96px;flex-basis:96px}.cfg-selected-name strong{font-size:11px}.cfg-part-head button{padding:5px}.cfg-total{font-size:25px}.cfg-option{gap:6px}}
+
+.cfg-qty{display:flex;gap:3px;align-items:center;font-size:9px;color:var(--muted);white-space:nowrap}.cfg-qty input{width:40px;padding:5px 3px;color:var(--ink);background:var(--card2);border:1px solid var(--line);border-radius:6px;font:11px ui-monospace,monospace}.cfg-head #cfg-import{white-space:nowrap}
+@media(max-width:650px){.cfg-selected{flex-wrap:wrap}.cfg-selected-name{flex-basis:calc(100% - 40px)}.cfg-qty{margin-left:27px}}
