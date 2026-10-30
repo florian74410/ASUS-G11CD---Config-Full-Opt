@@ -11,7 +11,24 @@
   "specifications": {
     "cores": 6,
     "threads": 12,
-    "socket": "AM4"
+    "socket": "AM4",
+    "architecture": "Zen 3",
+    "codename": "Vermeer",
+    "process_nm": 7,
+    "base_ghz": 3.7,
+    "boost_ghz": 4.6,
+    "cache_l2_mb": 3,
+    "cache_l3_mb": 32,
+    "tdp_w": 65,
+    "unlocked": true,
+    "max_temperature_c": 95,
+    "memory_type": "DDR4",
+    "memory_speed_mts": 3200,
+    "pcie_gen": 4,
+    "integrated_graphics": false,
+    "cooler_box": "AMD Wraith Stealth",
+    "part_number_box": "100-100000065BOX",
+    "part_number_tray": "100-000000065"
   },
   "performance": {
     "benchmarks": [],
@@ -34,17 +51,30 @@
     "notes": "À vérifier pour chaque projet"
   },
   "asset": "",
-  "sources": [],
+  "sources": [
+    {
+      "type": "official_manufacturer_specifications",
+      "url": "https://www.amd.com/fr/products/processors/desktops/ryzen/5000-series/amd-ryzen-5-5600x.html"
+    }
+  ],
   "data_quality": {
-    "status": "partial",
+    "status": "manufacturer_specifications_verified",
     "checked_at": "2026-10-30",
     "missing": [
-      "Manufacturer specifications beyond preliminary attributes",
-      "Validated image license / file",
-      "10 comparable new price offers",
-      "20 comparable used price offers",
-      "Measured benchmarks"
+      "Exact photos / multiple angles",
+      "10 verified new offers",
+      "20 verified used offers",
+      "Independent performance benchmarks"
     ]
   },
-  "notes": "Fiche catalogue initiale, compléter uniquement avec données vérifiées."
+  "notes": "Fiche catalogue initiale, compléter uniquement avec données vérifiées.",
+  "technical_description": "Le Ryzen 5 5600X est un processeur de bureau AMD Zen 3 (Vermeer) gravé en 7 nm : 6 cœurs physiques et 12 threads via SMT. Il fonctionne à 3,7 GHz de base et jusqu’à 4,6 GHz en Boost selon les conditions de température et de puissance. Son cache L3 de 32 Mo réduit certaines latences d’accès aux données. Le socket AM4, la DDR4 jusqu’à 3200 MT/s et le PCIe 4.0 permettent de l’intégrer à une plateforme compatible après vérification du BIOS. Avec son TDP de référence de 65 W, la boîte 100-100000065BOX inclut un Wraith Stealth. Absence de circuit graphique intégré : une carte graphique dédiée est nécessaire.",
+  "technologies": [
+    "x86-64 (64 bits)",
+    "Zen 3",
+    "SMT",
+    "AMD Ryzen Master",
+    "AMD StoreMI",
+    "PCIe 4.0"
+  ]
 }
