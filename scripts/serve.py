@@ -9,7 +9,31 @@ from urllib.parse import unquote, urlsplit
 
 ROOT=Path(__file__).resolve().parents[1]
 WEB=ROOT/"web"
-CATS=("CPU","GPU","Motherboard","NVMe","SDD","PSU","Extra","Case","RAM","Cooling")
+CATS=("CPU","GPU","Motherboard","NVMe","SDD","PSU","Extra","Case","RAM","Cooling","HDD")
+
+import unicodedata
+from urllib.parse import quote
+IMAGE_EXTENSIONS={".jpg",".jpeg",".png",".webp"}
+def image_key(value):
+    value=unicodedata.normalize("NFKD",str(value)).lower()
+    return "".join(ch for ch in value if ch.isascii() and ch.isalnum())
+def find_component_images(cat,path,obj):
+    folder=ROOT/"Assets"/cat
+    if not folder.is_dir(): return []
+    keys={image_key(path.stem),image_key(obj.get("id","")),image_key(obj.get("full_name",""))}
+    prefix=image_key(cat)
+    explicit=obj.get("asset")
+    found=[]
+    for image in sorted(folder.iterdir()):
+        if not image.is_file() or image.suffix.lower() not in IMAGE_EXTENSIONS: continue
+        k=image_key(image.stem)
+        unprefixed=k[len(prefix):] if k.startswith(prefix) else k
+        match=(k in keys or unprefixed in keys or
+               any(unprefixed==base+suffix for base in keys if base for suffix in ("1","2","3","front","back","side")))
+        if isinstance(explicit,str) and explicit and image.name==Path(explicit).name:match=True
+        if match:found.append("/files/"+quote(str(image.relative_to(ROOT)),safe="/"))
+    return found[:3]
+
 def collect():
     entries=[];errors=[];seen=set()
     for cat in CATS:
@@ -21,9 +45,9 @@ def collect():
                 if obj["id"] in seen: raise ValueError("identifiant dupliqué")
                 seen.add(obj["id"])
                 obj["_json"]=str(p.relative_to(ROOT))
-                base=p.stem
-                photos=[x for ext in (".jpg",".jpeg",".png",".webp") for x in [(ROOT/"Assets"/cat/(base+ext))] if x.is_file()]
-                obj["_photo"]="/files/"+str(photos[0].relative_to(ROOT)) if photos else None
+                photos=find_component_images(cat,p,obj)
+                obj["_photos"]=photos
+                obj["_photo"]=photos[0] if photos else None
                 entries.append(obj)
             except Exception as exc: errors.append(f"{p.relative_to(ROOT)} : {exc}")
     return entries,errors
