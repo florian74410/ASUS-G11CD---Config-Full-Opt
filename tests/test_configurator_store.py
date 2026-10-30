@@ -13,6 +13,7 @@ import configurator_store as store
 class Fake:
     def __init__(self,path,data=None,cookie="",csrf="",origin="http://127.0.0.1:8765"):
         self.path=path
+        self.server=type('Server',(),{'is_https':False})()
         self.client_address=("127.0.0.1",12345)
         self.headers={"Host":"127.0.0.1:8765","Origin":origin}
         if data is not None:
