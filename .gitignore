@@ -3,3 +3,7 @@ __pycache__/
 .venv/
 *.tmp
 ~$*.xlsx
+
+# Unlicensed retailer photo previews are local-only
+/Assets/Brut/LocalPreview/
+/LOCAL_PHOTO_PREVIEW_REPORT.json
