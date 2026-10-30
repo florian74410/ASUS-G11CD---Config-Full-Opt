@@ -222,3 +222,19 @@ body.detail-open{overflow:hidden}
 :root[data-theme="matrix"] .tech-icon,:root[data-theme="matrix"] .explain-icon{text-shadow:0 0 9px #45ff8a60}
 :root[data-theme="cyberpunk"] .tech-icon,:root[data-theme="cyberpunk"] .explain-icon{text-shadow:0 0 9px #20ddeb80}
 @media(max-width:650px){.tech-icon{font-size:16px}.explain-icon{width:23px;height:23px}}
+
+/* Consistent inline SVG pictograms */
+.hw-svg{display:block;width:20px;height:20px;flex:none;overflow:visible}
+.tech-icon,.explain-icon,.section-symbol,.mini-icon{display:inline-flex;align-items:center;justify-content:center;padding:0;line-height:1;vertical-align:middle}
+.tech-icon{width:34px;height:34px;flex:0 0 34px;min-width:34px;border-radius:9px}
+.tech-icon .hw-svg{width:20px;height:20px}
+.explain-icon{width:29px;height:29px;flex:0 0 29px}
+.explain-icon .hw-svg{width:17px;height:17px}
+.section-symbol{width:22px;height:22px;margin-right:6px}
+.section-symbol .hw-svg{width:18px;height:18px}
+.mini-icon{width:17px;height:17px;margin-right:6px}
+.mini-icon .hw-svg{width:14px;height:14px}
+.tech-panel h3{display:flex;align-items:center;gap:5px}
+.tech-tile{display:flex;align-items:center;min-height:58px}
+.tech-tile>div{min-width:0;flex:1}
+@media(max-width:650px){.tech-icon{width:30px;height:30px;flex-basis:30px;min-width:30px}.tech-icon .hw-svg{width:18px;height:18px}}
